@@ -8,39 +8,42 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteBuilder');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteCronEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteCronTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteCustomVersion');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteDockerEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteDockerTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteGitEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteGitTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteManifest');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteManualEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafettePipelineEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafettePipelineTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafettePubSubEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafettePubSubTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteRelease');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteReleaseAction');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteReleaseEvent');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteSemverVersion');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteStage');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteTrigger');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteVersion');
-goog.provide('proto.estafette.ci.manifest.v1.EstafetteVersionParams');
-goog.provide('proto.estafette.ci.manifest.v1.StringOrStringArray');
+goog.provide('proto.estafette.ci.contracts.v1.Build');
+goog.provide('proto.estafette.ci.contracts.v1.BuildLog');
+goog.provide('proto.estafette.ci.contracts.v1.BuildLogLine');
+goog.provide('proto.estafette.ci.contracts.v1.BuildLogStep');
+goog.provide('proto.estafette.ci.contracts.v1.BuildLogStepDockerImage');
+goog.provide('proto.estafette.ci.contracts.v1.BuildParamsConfig');
+goog.provide('proto.estafette.ci.contracts.v1.BuildVersionConfig');
+goog.provide('proto.estafette.ci.contracts.v1.BuilderConfig');
+goog.provide('proto.estafette.ci.contracts.v1.CiServerConfig');
+goog.provide('proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig');
+goog.provide('proto.estafette.ci.contracts.v1.CredentialConfig');
+goog.provide('proto.estafette.ci.contracts.v1.GitAuthor');
+goog.provide('proto.estafette.ci.contracts.v1.GitCommit');
+goog.provide('proto.estafette.ci.contracts.v1.GitConfig');
+goog.provide('proto.estafette.ci.contracts.v1.Label');
+goog.provide('proto.estafette.ci.contracts.v1.ListResponse');
+goog.provide('proto.estafette.ci.contracts.v1.Pagination');
+goog.provide('proto.estafette.ci.contracts.v1.Pipeline');
+goog.provide('proto.estafette.ci.contracts.v1.Release');
+goog.provide('proto.estafette.ci.contracts.v1.ReleaseLog');
+goog.provide('proto.estafette.ci.contracts.v1.ReleaseParamsConfig');
+goog.provide('proto.estafette.ci.contracts.v1.ReleaseTarget');
+goog.provide('proto.estafette.ci.contracts.v1.TailLogLine');
+goog.provide('proto.estafette.ci.contracts.v1.TrustedImageConfig');
+goog.provide('proto.estafette.ci.contracts.v1.Warning');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Map');
 goog.require('jspb.Message');
+goog.require('proto.estafette.ci.manifest.v1.EstafetteEvent');
+goog.require('proto.estafette.ci.manifest.v1.EstafetteManifest');
+goog.require('proto.estafette.ci.manifest.v1.EstafetteReleaseAction');
+goog.require('proto.estafette.ci.manifest.v1.EstafetteTrigger');
 goog.require('proto.google.protobuf.Any');
+goog.require('proto.google.protobuf.Duration');
 goog.require('proto.google.protobuf.Timestamp');
 
 /**
@@ -53,16 +56,16 @@ goog.require('proto.google.protobuf.Timestamp');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder = function(opt_data) {
+proto.estafette.ci.contracts.v1.GitAuthor = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteBuilder, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.GitAuthor, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteBuilder.displayName = 'proto.estafette.ci.manifest.v1.EstafetteBuilder';
+  proto.estafette.ci.contracts.v1.GitAuthor.displayName = 'proto.estafette.ci.contracts.v1.GitAuthor';
 }
 
 
@@ -80,8 +83,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteBuilder.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.GitAuthor.toObject(opt_includeInstance, this);
 };
 
 
@@ -90,14 +93,15 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteBuilder} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.GitAuthor} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.GitAuthor.toObject = function(includeInstance, msg) {
   var f, obj = {
-    track: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    operatingSystem: jspb.Message.getFieldWithDefault(msg, 2, "")
+    email: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    username: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -111,23 +115,23 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteBuilder}
+ * @return {!proto.estafette.ci.contracts.v1.GitAuthor}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.GitAuthor.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteBuilder;
-  return proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.GitAuthor;
+  return proto.estafette.ci.contracts.v1.GitAuthor.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteBuilder} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.GitAuthor} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteBuilder}
+ * @return {!proto.estafette.ci.contracts.v1.GitAuthor}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.GitAuthor.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -136,11 +140,15 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinaryFromReader = fu
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTrack(value);
+      msg.setEmail(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setOperatingSystem(value);
+      msg.setName(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUsername(value);
       break;
     default:
       reader.skipField();
@@ -155,9 +163,9 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteBuilder.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.GitAuthor.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -165,23 +173,30 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteBuilder} message
+ * @param {!proto.estafette.ci.contracts.v1.GitAuthor} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.GitAuthor.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTrack();
+  f = message.getEmail();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getOperatingSystem();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = message.getUsername();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
       f
     );
   }
@@ -189,32 +204,47 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.serializeBinaryToWriter = functi
 
 
 /**
- * optional string track = 1;
+ * optional string email = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.getTrack = function() {
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.getEmail = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.setTrack = function(value) {
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.setEmail = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string operating_system = 2;
+ * optional string name = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.getOperatingSystem = function() {
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.setOperatingSystem = function(value) {
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string username = 3;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.getUsername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.GitAuthor.prototype.setUsername = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -228,16 +258,16 @@ proto.estafette.ci.manifest.v1.EstafetteBuilder.prototype.setOperatingSystem = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent = function(opt_data) {
+proto.estafette.ci.contracts.v1.GitCommit = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteCronEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.GitCommit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteCronEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteCronEvent';
+  proto.estafette.ci.contracts.v1.GitCommit.displayName = 'proto.estafette.ci.contracts.v1.GitCommit';
 }
 
 
@@ -255,8 +285,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteCronEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.GitCommit.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.GitCommit.toObject(opt_includeInstance, this);
 };
 
 
@@ -265,13 +295,14 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.GitCommit} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.GitCommit.toObject = function(includeInstance, msg) {
   var f, obj = {
-    time: (f = msg.getTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
+    message: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    author: (f = msg.getAuthor()) && proto.estafette.ci.contracts.v1.GitAuthor.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -285,23 +316,23 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCronEvent}
+ * @return {!proto.estafette.ci.contracts.v1.GitCommit}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.GitCommit.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteCronEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.GitCommit;
+  return proto.estafette.ci.contracts.v1.GitCommit.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.GitCommit} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCronEvent}
+ * @return {!proto.estafette.ci.contracts.v1.GitCommit}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.GitCommit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -309,9 +340,13 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.google.protobuf.Timestamp;
-      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
-      msg.setTime(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
+    case 2:
+      var value = new proto.estafette.ci.contracts.v1.GitAuthor;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.GitAuthor.deserializeBinaryFromReader);
+      msg.setAuthor(value);
       break;
     default:
       reader.skipField();
@@ -326,9 +361,9 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.GitCommit.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteCronEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.GitCommit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -336,44 +371,66 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.GitCommit} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.GitCommit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTime();
+  f = message.getMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getAuthor();
   if (f != null) {
     writer.writeMessage(
-      1,
+      2,
       f,
-      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+      proto.estafette.ci.contracts.v1.GitAuthor.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional google.protobuf.Timestamp time = 1;
- * @return {?proto.google.protobuf.Timestamp}
+ * optional string message = 1;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.getTime = function() {
-  return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 1));
+proto.estafette.ci.contracts.v1.GitCommit.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {?proto.google.protobuf.Timestamp|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.setTime = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.GitCommit.prototype.setMessage = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional GitAuthor author = 2;
+ * @return {?proto.estafette.ci.contracts.v1.GitAuthor}
+ */
+proto.estafette.ci.contracts.v1.GitCommit.prototype.getAuthor = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.GitAuthor} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.GitAuthor, 2));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.GitAuthor|undefined} value */
+proto.estafette.ci.contracts.v1.GitCommit.prototype.setAuthor = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.clearTime = function() {
-  this.setTime(undefined);
+proto.estafette.ci.contracts.v1.GitCommit.prototype.clearAuthor = function() {
+  this.setAuthor(undefined);
 };
 
 
@@ -381,8 +438,8 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.clearTime = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.hasTime = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.estafette.ci.contracts.v1.GitCommit.prototype.hasAuthor = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -396,16 +453,16 @@ proto.estafette.ci.manifest.v1.EstafetteCronEvent.prototype.hasTime = function()
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger = function(opt_data) {
+proto.estafette.ci.contracts.v1.Label = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteCronTrigger, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.Label, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteCronTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafetteCronTrigger';
+  proto.estafette.ci.contracts.v1.Label.displayName = 'proto.estafette.ci.contracts.v1.Label';
 }
 
 
@@ -423,8 +480,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteCronTrigger.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.Label.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Label.toObject(opt_includeInstance, this);
 };
 
 
@@ -433,13 +490,14 @@ proto.estafette.ci.manifest.v1.EstafetteCronTrigger.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronTrigger} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.Label} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.Label.toObject = function(includeInstance, msg) {
   var f, obj = {
-    schedule: jspb.Message.getFieldWithDefault(msg, 1, "")
+    key: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -453,23 +511,23 @@ proto.estafette.ci.manifest.v1.EstafetteCronTrigger.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCronTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.Label}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.Label.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteCronTrigger;
-  return proto.estafette.ci.manifest.v1.EstafetteCronTrigger.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.Label;
+  return proto.estafette.ci.contracts.v1.Label.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronTrigger} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.Label} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCronTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.Label}
  */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.Label.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -478,313 +536,11 @@ proto.estafette.ci.manifest.v1.EstafetteCronTrigger.deserializeBinaryFromReader 
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setSchedule(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteCronTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCronTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getSchedule();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string schedule = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.prototype.getSchedule = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteCronTrigger.prototype.setSchedule = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteCustomVersion, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteCustomVersion.displayName = 'proto.estafette.ci.manifest.v1.EstafetteCustomVersion';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteCustomVersion.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCustomVersion} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    labelTemplate: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCustomVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteCustomVersion;
-  return proto.estafette.ci.manifest.v1.EstafetteCustomVersion.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCustomVersion} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteCustomVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLabelTemplate(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteCustomVersion.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteCustomVersion} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getLabelTemplate();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string label_template = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.prototype.getLabelTemplate = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteCustomVersion.prototype.setLabelTemplate = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteDockerEvent, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteDockerEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteDockerEvent';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteDockerEvent.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerEvent} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    image: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    tag: jspb.Message.getFieldWithDefault(msg, 3, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteDockerEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteDockerEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteDockerEvent.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerEvent} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteDockerEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
+      msg.setKey(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setImage(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTag(value);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -799,9 +555,9 @@ proto.estafette.ci.manifest.v1.EstafetteDockerEvent.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.Label.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteDockerEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.Label.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -809,78 +565,56 @@ proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.Label} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.Label.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getEvent();
+  f = message.getKey();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getImage();
+  f = message.getValue();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getTag();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
 };
 
 
 /**
- * optional string event = 1;
+ * optional string key = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.Label.prototype.getKey = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.Label.prototype.setKey = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string image = 2;
+ * optional string value = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.getImage = function() {
+proto.estafette.ci.contracts.v1.Label.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.setImage = function(value) {
+proto.estafette.ci.contracts.v1.Label.prototype.setValue = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string tag = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.getTag = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.setTag = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -894,17 +628,24 @@ proto.estafette.ci.manifest.v1.EstafetteDockerEvent.prototype.setTag = function(
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.estafette.ci.contracts.v1.Release = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.Release.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteDockerTrigger, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.Release, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafetteDockerTrigger';
+  proto.estafette.ci.contracts.v1.Release.displayName = 'proto.estafette.ci.contracts.v1.Release';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.Release.repeatedFields_ = [8];
 
 
 
@@ -921,8 +662,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.Release.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Release.toObject(opt_includeInstance, this);
 };
 
 
@@ -931,15 +672,24 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerTrigger} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.Release} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.Release.toObject = function(includeInstance, msg) {
   var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    image: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    tag: jspb.Message.getFieldWithDefault(msg, 3, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    action: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    id: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    repoSource: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    repoOwner: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    releaseVersion: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    releaseStatus: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+    proto.estafette.ci.manifest.v1.EstafetteEvent.toObject, includeInstance),
+    insertedAtTime: (f = msg.getInsertedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    updatedAtTime: (f = msg.getUpdatedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    duration: (f = msg.getDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -953,23 +703,23 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteDockerTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.Release}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.Release.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteDockerTrigger;
-  return proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.Release;
+  return proto.estafette.ci.contracts.v1.Release.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerTrigger} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.Release} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteDockerTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.Release}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.Release.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -978,15 +728,51 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinaryFromReade
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setImage(value);
+      msg.setAction(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTag(value);
+      msg.setId(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoSource(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoOwner(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseVersion(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseStatus(value);
+      break;
+    case 8:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteEvent;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader);
+      msg.addEvents(value);
+      break;
+    case 9:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setInsertedAtTime(value);
+      break;
+    case 10:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setUpdatedAtTime(value);
+      break;
+    case 11:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setDuration(value);
       break;
     default:
       reader.skipField();
@@ -1001,9 +787,9 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.Release.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.Release.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1011,78 +797,331 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteDockerTrigger} message
+ * @param {!proto.estafette.ci.contracts.v1.Release} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.Release.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getEvent();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getImage();
+  f = message.getAction();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getTag();
+  f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
+  f = message.getRepoSource();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getRepoOwner();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getReleaseVersion();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getReleaseStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getEventsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter
+    );
+  }
+  f = message.getInsertedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getUpdatedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      10,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDuration();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
 };
 
 
 /**
- * optional string event = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.Release.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.Release.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string image = 2;
+ * optional string action = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.getImage = function() {
+proto.estafette.ci.contracts.v1.Release.prototype.getAction = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.setImage = function(value) {
+proto.estafette.ci.contracts.v1.Release.prototype.setAction = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string tag = 3;
+ * optional string id = 3;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.getTag = function() {
+proto.estafette.ci.contracts.v1.Release.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.setTag = function(value) {
+proto.estafette.ci.contracts.v1.Release.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string repo_source = 4;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getRepoSource = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setRepoSource = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string repo_owner = 5;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getRepoOwner = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setRepoOwner = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string release_version = 6;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getReleaseVersion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setReleaseVersion = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string release_status = 7;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getReleaseStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setReleaseStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * repeated estafette.ci.manifest.v1.EstafetteEvent events = 8;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getEventsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteEvent, 8));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setEventsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.addEvents = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.estafette.ci.manifest.v1.EstafetteEvent, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.clearEventsList = function() {
+  this.setEventsList([]);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp inserted_at_time = 9;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getInsertedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 9));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setInsertedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.clearInsertedAtTime = function() {
+  this.setInsertedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.hasInsertedAtTime = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp updated_at_time = 10;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getUpdatedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 10));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setUpdatedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 10, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.clearUpdatedAtTime = function() {
+  this.setUpdatedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.hasUpdatedAtTime = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional google.protobuf.Duration duration = 11;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.getDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 11));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.Release.prototype.setDuration = function(value) {
+  jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.clearDuration = function() {
+  this.setDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Release.prototype.hasDuration = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
@@ -1096,17 +1135,24 @@ proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.prototype.setTag = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.estafette.ci.contracts.v1.ReleaseTarget = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.ReleaseTarget.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteGitEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.ReleaseTarget, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteGitEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteGitEvent';
+  proto.estafette.ci.contracts.v1.ReleaseTarget.displayName = 'proto.estafette.ci.contracts.v1.ReleaseTarget';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.ReleaseTarget.repeatedFields_ = [2,3];
 
 
 
@@ -1123,8 +1169,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteGitEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.ReleaseTarget.toObject(opt_includeInstance, this);
 };
 
 
@@ -1133,15 +1179,17 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseTarget} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.ReleaseTarget.toObject = function(includeInstance, msg) {
   var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    repository: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    branch: jspb.Message.getFieldWithDefault(msg, 3, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    actionsList: jspb.Message.toObjectList(msg.getActionsList(),
+    proto.estafette.ci.manifest.v1.EstafetteReleaseAction.toObject, includeInstance),
+    activeReleasesList: jspb.Message.toObjectList(msg.getActiveReleasesList(),
+    proto.estafette.ci.contracts.v1.Release.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1155,23 +1203,23 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteGitEvent}
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseTarget}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.ReleaseTarget.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteGitEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.ReleaseTarget;
+  return proto.estafette.ci.contracts.v1.ReleaseTarget.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseTarget} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteGitEvent}
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseTarget}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.ReleaseTarget.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1180,15 +1228,17 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinaryFromReader = f
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
+      msg.setName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRepository(value);
+      var value = new proto.estafette.ci.manifest.v1.EstafetteReleaseAction;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteReleaseAction.deserializeBinaryFromReader);
+      msg.addActions(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBranch(value);
+      var value = new proto.estafette.ci.contracts.v1.Release;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.Release.deserializeBinaryFromReader);
+      msg.addActiveReleases(value);
       break;
     default:
       reader.skipField();
@@ -1203,9 +1253,9 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteGitEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.ReleaseTarget.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1213,78 +1263,118 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseTarget} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.ReleaseTarget.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getEvent();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getRepository();
+  f = message.getActionsList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedMessage(
       2,
-      f
+      f,
+      proto.estafette.ci.manifest.v1.EstafetteReleaseAction.serializeBinaryToWriter
     );
   }
-  f = message.getBranch();
+  f = message.getActiveReleasesList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedMessage(
       3,
-      f
+      f,
+      proto.estafette.ci.contracts.v1.Release.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string event = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string repository = 2;
- * @return {string}
+ * repeated estafette.ci.manifest.v1.EstafetteReleaseAction actions = 2;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.getRepository = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.getActionsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteReleaseAction, 2));
 };
 
 
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.setRepository = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>} value */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.setActionsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * optional string branch = 3;
- * @return {string}
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.getBranch = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.addActions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.estafette.ci.manifest.v1.EstafetteReleaseAction, opt_index);
 };
 
 
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.setBranch = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.clearActionsList = function() {
+  this.setActionsList([]);
+};
+
+
+/**
+ * repeated Release active_releases = 3;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.Release>}
+ */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.getActiveReleasesList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.Release>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.Release, 3));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.Release>} value */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.setActiveReleasesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.Release=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.Release}
+ */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.addActiveReleases = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.estafette.ci.contracts.v1.Release, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.ReleaseTarget.prototype.clearActiveReleasesList = function() {
+  this.setActiveReleasesList([]);
 };
 
 
@@ -1298,17 +1388,24 @@ proto.estafette.ci.manifest.v1.EstafetteGitEvent.prototype.setBranch = function(
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.estafette.ci.contracts.v1.Build = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.Build.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteManualEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.Build, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteManualEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteManualEvent';
+  proto.estafette.ci.contracts.v1.Build.displayName = 'proto.estafette.ci.contracts.v1.Build';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.Build.repeatedFields_ = [9,10,13,14,15];
 
 
 
@@ -1325,8 +1422,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteManualEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.Build.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Build.toObject(opt_includeInstance, this);
 };
 
 
@@ -1335,167 +1432,35 @@ proto.estafette.ci.manifest.v1.EstafetteManualEvent.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManualEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.Build} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.Build.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userId: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteManualEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteManualEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteManualEvent.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManualEvent} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteManualEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUserId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteManualEvent.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManualEvent} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getUserId();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string user_id = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.prototype.getUserId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteManualEvent.prototype.setUserId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafettePipelineEvent, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafettePipelineEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafettePipelineEvent';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafettePipelineEvent.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineEvent} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    buildVersion: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     repoSource: jspb.Message.getFieldWithDefault(msg, 2, ""),
     repoOwner: jspb.Message.getFieldWithDefault(msg, 3, ""),
     repoName: jspb.Message.getFieldWithDefault(msg, 4, ""),
     repoBranch: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    event: jspb.Message.getFieldWithDefault(msg, 7, "")
+    repoRevision: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    buildVersion: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    buildStatus: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    labelsList: jspb.Message.toObjectList(msg.getLabelsList(),
+    proto.estafette.ci.contracts.v1.Label.toObject, includeInstance),
+    releaseTargetsList: jspb.Message.toObjectList(msg.getReleaseTargetsList(),
+    proto.estafette.ci.contracts.v1.ReleaseTarget.toObject, includeInstance),
+    manifest: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    manifestWithDefaults: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    commitsList: jspb.Message.toObjectList(msg.getCommitsList(),
+    proto.estafette.ci.contracts.v1.GitCommit.toObject, includeInstance),
+    triggersList: jspb.Message.toObjectList(msg.getTriggersList(),
+    proto.estafette.ci.manifest.v1.EstafetteTrigger.toObject, includeInstance),
+    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+    proto.estafette.ci.manifest.v1.EstafetteEvent.toObject, includeInstance),
+    insertedAtTime: (f = msg.getInsertedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    updatedAtTime: (f = msg.getUpdatedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    duration: (f = msg.getDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1509,23 +1474,23 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePipelineEvent}
+ * @return {!proto.estafette.ci.contracts.v1.Build}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.Build.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafettePipelineEvent;
-  return proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.Build;
+  return proto.estafette.ci.contracts.v1.Build.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.Build} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePipelineEvent}
+ * @return {!proto.estafette.ci.contracts.v1.Build}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.Build.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1534,7 +1499,7 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReade
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setBuildVersion(value);
+      msg.setId(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -1554,11 +1519,63 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReade
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      msg.setRepoRevision(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
+      msg.setBuildVersion(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuildStatus(value);
+      break;
+    case 9:
+      var value = new proto.estafette.ci.contracts.v1.Label;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.Label.deserializeBinaryFromReader);
+      msg.addLabels(value);
+      break;
+    case 10:
+      var value = new proto.estafette.ci.contracts.v1.ReleaseTarget;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.ReleaseTarget.deserializeBinaryFromReader);
+      msg.addReleaseTargets(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setManifest(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setManifestWithDefaults(value);
+      break;
+    case 13:
+      var value = new proto.estafette.ci.contracts.v1.GitCommit;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.GitCommit.deserializeBinaryFromReader);
+      msg.addCommits(value);
+      break;
+    case 14:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteTrigger;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinaryFromReader);
+      msg.addTriggers(value);
+      break;
+    case 15:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteEvent;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader);
+      msg.addEvents(value);
+      break;
+    case 16:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setInsertedAtTime(value);
+      break;
+    case 17:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setUpdatedAtTime(value);
+      break;
+    case 18:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setDuration(value);
       break;
     default:
       reader.skipField();
@@ -1573,9 +1590,9 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafettePipelineEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.Build.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1583,13 +1600,13 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.Build} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.Build.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getBuildVersion();
+  f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -1624,34 +1641,119 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.serializeBinaryToWriter = 
       f
     );
   }
-  f = message.getStatus();
+  f = message.getRepoRevision();
   if (f.length > 0) {
     writer.writeString(
       6,
       f
     );
   }
-  f = message.getEvent();
+  f = message.getBuildVersion();
   if (f.length > 0) {
     writer.writeString(
       7,
       f
     );
   }
+  f = message.getBuildStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = message.getLabelsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.estafette.ci.contracts.v1.Label.serializeBinaryToWriter
+    );
+  }
+  f = message.getReleaseTargetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      proto.estafette.ci.contracts.v1.ReleaseTarget.serializeBinaryToWriter
+    );
+  }
+  f = message.getManifest();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
+      f
+    );
+  }
+  f = message.getManifestWithDefaults();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
+      f
+    );
+  }
+  f = message.getCommitsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      13,
+      f,
+      proto.estafette.ci.contracts.v1.GitCommit.serializeBinaryToWriter
+    );
+  }
+  f = message.getTriggersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      14,
+      f,
+      proto.estafette.ci.manifest.v1.EstafetteTrigger.serializeBinaryToWriter
+    );
+  }
+  f = message.getEventsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      15,
+      f,
+      proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter
+    );
+  }
+  f = message.getInsertedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      16,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getUpdatedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      17,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDuration();
+  if (f != null) {
+    writer.writeMessage(
+      18,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
 };
 
 
 /**
- * optional string build_version = 1;
+ * optional string id = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getBuildVersion = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setBuildVersion = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1660,13 +1762,13 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setBuildVersion 
  * optional string repo_source = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getRepoSource = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getRepoSource = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoSource = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setRepoSource = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1675,13 +1777,13 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoSource = 
  * optional string repo_owner = 3;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getRepoOwner = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getRepoOwner = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoOwner = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setRepoOwner = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -1690,13 +1792,13 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoOwner = f
  * optional string repo_name = 4;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getRepoName = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getRepoName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoName = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setRepoName = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -1705,44 +1807,358 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoName = fu
  * optional string repo_branch = 5;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getRepoBranch = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getRepoBranch = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setRepoBranch = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setRepoBranch = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional string status = 6;
+ * optional string repo_revision = 6;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getStatus = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getRepoRevision = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setStatus = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setRepoRevision = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * optional string event = 7;
+ * optional string build_version = 7;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.Build.prototype.getBuildVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.Build.prototype.setBuildVersion = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional string build_status = 8;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getBuildStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setBuildStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * repeated Label labels = 9;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.Label>}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getLabelsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.Label>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.Label, 9));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.Label>} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setLabelsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.Label=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.Label}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.addLabels = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.estafette.ci.contracts.v1.Label, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearLabelsList = function() {
+  this.setLabelsList([]);
+};
+
+
+/**
+ * repeated ReleaseTarget release_targets = 10;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getReleaseTargetsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.ReleaseTarget, 10));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setReleaseTargetsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseTarget=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseTarget}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.addReleaseTargets = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.estafette.ci.contracts.v1.ReleaseTarget, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearReleaseTargetsList = function() {
+  this.setReleaseTargetsList([]);
+};
+
+
+/**
+ * optional string manifest = 11;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getManifest = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setManifest = function(value) {
+  jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * optional string manifest_with_defaults = 12;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getManifestWithDefaults = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setManifestWithDefaults = function(value) {
+  jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
+/**
+ * repeated GitCommit commits = 13;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.GitCommit>}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getCommitsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.GitCommit>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.GitCommit, 13));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.GitCommit>} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setCommitsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 13, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.GitCommit=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.GitCommit}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.addCommits = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.estafette.ci.contracts.v1.GitCommit, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearCommitsList = function() {
+  this.setCommitsList([]);
+};
+
+
+/**
+ * repeated estafette.ci.manifest.v1.EstafetteTrigger triggers = 14;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getTriggersList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTrigger, 14));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setTriggersList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 14, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteTrigger=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteTrigger}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.addTriggers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.estafette.ci.manifest.v1.EstafetteTrigger, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearTriggersList = function() {
+  this.setTriggersList([]);
+};
+
+
+/**
+ * repeated estafette.ci.manifest.v1.EstafetteEvent events = 15;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getEventsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteEvent, 15));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setEventsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 15, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.addEvents = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.estafette.ci.manifest.v1.EstafetteEvent, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearEventsList = function() {
+  this.setEventsList([]);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp inserted_at_time = 16;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getInsertedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 16));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setInsertedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 16, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearInsertedAtTime = function() {
+  this.setInsertedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.hasInsertedAtTime = function() {
+  return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp updated_at_time = 17;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getUpdatedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 17));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setUpdatedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 17, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearUpdatedAtTime = function() {
+  this.setUpdatedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.hasUpdatedAtTime = function() {
+  return jspb.Message.getField(this, 17) != null;
+};
+
+
+/**
+ * optional google.protobuf.Duration duration = 18;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.getDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 18));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.Build.prototype.setDuration = function(value) {
+  jspb.Message.setWrapperField(this, 18, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.clearDuration = function() {
+  this.setDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Build.prototype.hasDuration = function() {
+  return jspb.Message.getField(this, 18) != null;
 };
 
 
@@ -1756,16 +2172,16 @@ proto.estafette.ci.manifest.v1.EstafettePipelineEvent.prototype.setEvent = funct
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent = function(opt_data) {
+proto.estafette.ci.contracts.v1.BuildLogLine = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafettePubSubEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.BuildLogLine, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafettePubSubEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafettePubSubEvent';
+  proto.estafette.ci.contracts.v1.BuildLogLine.displayName = 'proto.estafette.ci.contracts.v1.BuildLogLine';
 }
 
 
@@ -1783,8 +2199,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafettePubSubEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildLogLine.toObject(opt_includeInstance, this);
 };
 
 
@@ -1793,14 +2209,16 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.toObject = functio
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogLine} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.BuildLogLine.toObject = function(includeInstance, msg) {
   var f, obj = {
-    project: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    topic: jspb.Message.getFieldWithDefault(msg, 2, "")
+    lineNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    timestampTime: (f = msg.getTimestampTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    streamType: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    text: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -1814,23 +2232,23 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.toObject = function(includeI
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePubSubEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogLine}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.BuildLogLine.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafettePubSubEvent;
-  return proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.BuildLogLine;
+  return proto.estafette.ci.contracts.v1.BuildLogLine.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogLine} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePubSubEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogLine}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.BuildLogLine.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1838,12 +2256,21 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinaryFromReader 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setProject(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setLineNumber(value);
       break;
     case 2:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setTimestampTime(value);
+      break;
+    case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTopic(value);
+      msg.setStreamType(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setText(value);
       break;
     default:
       reader.skipField();
@@ -1858,9 +2285,9 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinaryFromReader 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafettePubSubEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.BuildLogLine.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1868,23 +2295,38 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.serializeBinary = 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogLine} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.BuildLogLine.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getProject();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getLineNumber();
+  if (f !== 0) {
+    writer.writeInt64(
       1,
       f
     );
   }
-  f = message.getTopic();
+  f = message.getTimestampTime();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getStreamType();
   if (f.length > 0) {
     writer.writeString(
-      2,
+      3,
+      f
+    );
+  }
+  f = message.getText();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -1892,32 +2334,80 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.serializeBinaryToWriter = fu
 
 
 /**
- * optional string project = 1;
- * @return {string}
+ * optional int64 line_number = 1;
+ * @return {number}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.getProject = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.getLineNumber = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.setProject = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.setLineNumber = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
- * optional string topic = 2;
+ * optional google.protobuf.Timestamp timestamp_time = 2;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.getTimestampTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 2));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.setTimestampTime = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.clearTimestampTime = function() {
+  this.setTimestampTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.hasTimestampTime = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional string stream_type = 3;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.getTopic = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.getStreamType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.setTopic = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.setStreamType = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string text = 4;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.getText = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogLine.prototype.setText = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -1931,16 +2421,16 @@ proto.estafette.ci.manifest.v1.EstafettePubSubEvent.prototype.setTopic = functio
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent = function(opt_data) {
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteReleaseEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.BuildLogStepDockerImage, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteReleaseEvent';
+  proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.displayName = 'proto.estafette.ci.contracts.v1.BuildLogStepDockerImage';
 }
 
 
@@ -1958,8 +2448,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.toObject(opt_includeInstance, this);
 };
 
 
@@ -1968,19 +2458,19 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.toObject = functi
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStepDockerImage} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    releaseVersion: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    repoSource: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    repoOwner: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    repoName: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    target: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    event: jspb.Message.getFieldWithDefault(msg, 7, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    tag: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    isPulled: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    imageSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    pullDuration: (f = msg.getPullDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f),
+    error: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    isTrusted: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
   };
 
   if (includeInstance) {
@@ -1994,23 +2484,23 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.toObject = function(include
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStepDockerImage}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteReleaseEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.BuildLogStepDockerImage;
+  return proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStepDockerImage} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStepDockerImage}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2019,7 +2509,753 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setReleaseVersion(value);
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTag(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsPulled(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setImageSize(value);
+      break;
+    case 5:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setPullDuration(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setError(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setIsTrusted(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStepDockerImage} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getTag();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getIsPulled();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getImageSize();
+  if (f !== 0) {
+    writer.writeInt64(
+      4,
+      f
+    );
+  }
+  f = message.getPullDuration();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
+  f = message.getError();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getIsTrusted();
+  if (f) {
+    writer.writeBool(
+      7,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string tag = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getTag = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setTag = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional bool is_pulled = 3;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getIsPulled = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setIsPulled = function(value) {
+  jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional int64 image_size = 4;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getImageSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setImageSize = function(value) {
+  jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional google.protobuf.Duration pull_duration = 5;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getPullDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 5));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setPullDuration = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.clearPullDuration = function() {
+  this.setPullDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.hasPullDuration = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string error = 6;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getError = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setError = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional bool is_trusted = 7;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.getIsTrusted = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.prototype.setIsTrusted = function(value) {
+  jspb.Message.setProto3BooleanField(this, 7, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.BuildLogStep.repeatedFields_, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.BuildLogStep, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.BuildLogStep.displayName = 'proto.estafette.ci.contracts.v1.BuildLogStep';
+}
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.repeatedFields_ = [5];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildLogStep.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStep} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    step: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    image: (f = msg.getImage()) && proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.toObject(includeInstance, f),
+    runIndex: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    duration: (f = msg.getDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f),
+    logLinesList: jspb.Message.toObjectList(msg.getLogLinesList(),
+    proto.estafette.ci.contracts.v1.BuildLogLine.toObject, includeInstance),
+    exitCode: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    status: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    autoInjected: jspb.Message.getBooleanFieldWithDefault(msg, 8, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStep}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.BuildLogStep;
+  return proto.estafette.ci.contracts.v1.BuildLogStep.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStep} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStep}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStep(value);
+      break;
+    case 2:
+      var value = new proto.estafette.ci.contracts.v1.BuildLogStepDockerImage;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.deserializeBinaryFromReader);
+      msg.setImage(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setRunIndex(value);
+      break;
+    case 4:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setDuration(value);
+      break;
+    case 5:
+      var value = new proto.estafette.ci.contracts.v1.BuildLogLine;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogLine.deserializeBinaryFromReader);
+      msg.addLogLines(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setExitCode(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStatus(value);
+      break;
+    case 8:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAutoInjected(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.BuildLogStep.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStep} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStep();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getImage();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.serializeBinaryToWriter
+    );
+  }
+  f = message.getRunIndex();
+  if (f !== 0) {
+    writer.writeInt64(
+      3,
+      f
+    );
+  }
+  f = message.getDuration();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
+  f = message.getLogLinesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      5,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogLine.serializeBinaryToWriter
+    );
+  }
+  f = message.getExitCode();
+  if (f !== 0) {
+    writer.writeInt64(
+      6,
+      f
+    );
+  }
+  f = message.getStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getAutoInjected();
+  if (f) {
+    writer.writeBool(
+      8,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string step = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getStep = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setStep = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional BuildLogStepDockerImage image = 2;
+ * @return {?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getImage = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogStepDockerImage, 2));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage|undefined} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setImage = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.clearImage = function() {
+  this.setImage(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.hasImage = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional int64 run_index = 3;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getRunIndex = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setRunIndex = function(value) {
+  jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional google.protobuf.Duration duration = 4;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 4));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setDuration = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.clearDuration = function() {
+  this.setDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.hasDuration = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * repeated BuildLogLine log_lines = 5;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.BuildLogLine>}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getLogLinesList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.BuildLogLine>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogLine, 5));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.BuildLogLine>} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setLogLinesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 5, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogLine=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogLine}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.addLogLines = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.estafette.ci.contracts.v1.BuildLogLine, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.clearLogLinesList = function() {
+  this.setLogLinesList([]);
+};
+
+
+/**
+ * optional int64 exit_code = 6;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getExitCode = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setExitCode = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional string status = 7;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional bool auto_injected = 8;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.getAutoInjected = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.BuildLogStep.prototype.setAutoInjected = function(value) {
+  jspb.Message.setProto3BooleanField(this, 8, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.BuildLog = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.BuildLog.repeatedFields_, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.BuildLog, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.BuildLog.displayName = 'proto.estafette.ci.contracts.v1.BuildLog';
+}
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.BuildLog.repeatedFields_ = [8];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildLog.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.BuildLog} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildLog.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    repoSource: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    repoOwner: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    repoName: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    repoBranch: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    repoRevision: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    buildId: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    stepsList: jspb.Message.toObjectList(msg.getStepsList(),
+    proto.estafette.ci.contracts.v1.BuildLogStep.toObject, includeInstance),
+    insertedAtTime: (f = msg.getInsertedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.BuildLog}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.BuildLog;
+  return proto.estafette.ci.contracts.v1.BuildLog.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.BuildLog} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.BuildLog}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -2035,15 +3271,25 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTarget(value);
+      msg.setRepoBranch(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      msg.setRepoRevision(value);
       break;
     case 7:
       var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
+      msg.setBuildId(value);
+      break;
+    case 8:
+      var value = new proto.estafette.ci.contracts.v1.BuildLogStep;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogStep.deserializeBinaryFromReader);
+      msg.addSteps(value);
+      break;
+    case 9:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setInsertedAtTime(value);
       break;
     default:
       reader.skipField();
@@ -2058,9 +3304,9 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.BuildLog.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2068,13 +3314,13 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.serializeBinary =
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.BuildLog} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.BuildLog.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getReleaseVersion();
+  f = message.getId();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -2102,41 +3348,57 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.serializeBinaryToWriter = f
       f
     );
   }
-  f = message.getTarget();
+  f = message.getRepoBranch();
   if (f.length > 0) {
     writer.writeString(
       5,
       f
     );
   }
-  f = message.getStatus();
+  f = message.getRepoRevision();
   if (f.length > 0) {
     writer.writeString(
       6,
       f
     );
   }
-  f = message.getEvent();
+  f = message.getBuildId();
   if (f.length > 0) {
     writer.writeString(
       7,
       f
     );
   }
+  f = message.getStepsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogStep.serializeBinaryToWriter
+    );
+  }
+  f = message.getInsertedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
 };
 
 
 /**
- * optional string release_version = 1;
+ * optional string id = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getReleaseVersion = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setReleaseVersion = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2145,13 +3407,13 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setReleaseVersion
  * optional string repo_source = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getRepoSource = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getRepoSource = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setRepoSource = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setRepoSource = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2160,13 +3422,13 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setRepoSource = f
  * optional string repo_owner = 3;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getRepoOwner = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getRepoOwner = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setRepoOwner = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setRepoOwner = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -2175,63 +3437,130 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setRepoOwner = fu
  * optional string repo_name = 4;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getRepoName = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getRepoName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setRepoName = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setRepoName = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * optional string target = 5;
+ * optional string repo_branch = 5;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getTarget = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getRepoBranch = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setTarget = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setRepoBranch = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional string status = 6;
+ * optional string repo_revision = 6;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getStatus = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getRepoRevision = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setStatus = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setRepoRevision = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * optional string event = 7;
+ * optional string build_id = 7;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getBuildId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setBuildId = function(value) {
   jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
+ * repeated BuildLogStep steps = 8;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getStepsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogStep, 8));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>} value */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setStepsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStep=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStep}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.addSteps = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.estafette.ci.contracts.v1.BuildLogStep, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.clearStepsList = function() {
+  this.setStepsList([]);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp inserted_at_time = 9;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.getInsertedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 9));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.setInsertedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.clearInsertedAtTime = function() {
+  this.setInsertedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuildLog.prototype.hasInsertedAtTime = function() {
+  return jspb.Message.getField(this, 9) != null;
+};
+
+
+/**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
  * server response, or constructed directly in Javascript. The array is used
@@ -2241,16 +3570,16 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.prototype.setEvent = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent = function(opt_data) {
+proto.estafette.ci.contracts.v1.BuildParamsConfig = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteEvent, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.BuildParamsConfig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteEvent.displayName = 'proto.estafette.ci.manifest.v1.EstafetteEvent';
+  proto.estafette.ci.contracts.v1.BuildParamsConfig.displayName = 'proto.estafette.ci.contracts.v1.BuildParamsConfig';
 }
 
 
@@ -2268,8 +3597,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteEvent.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.BuildParamsConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildParamsConfig.toObject(opt_includeInstance, this);
 };
 
 
@@ -2278,19 +3607,13 @@ proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.BuildParamsConfig} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.BuildParamsConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-    pipeline: (f = msg.getPipeline()) && proto.estafette.ci.manifest.v1.EstafettePipelineEvent.toObject(includeInstance, f),
-    release: (f = msg.getRelease()) && proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.toObject(includeInstance, f),
-    git: (f = msg.getGit()) && proto.estafette.ci.manifest.v1.EstafetteGitEvent.toObject(includeInstance, f),
-    docker: (f = msg.getDocker()) && proto.estafette.ci.manifest.v1.EstafetteDockerEvent.toObject(includeInstance, f),
-    cron: (f = msg.getCron()) && proto.estafette.ci.manifest.v1.EstafetteCronEvent.toObject(includeInstance, f),
-    pubSub: (f = msg.getPubSub()) && proto.estafette.ci.manifest.v1.EstafettePubSubEvent.toObject(includeInstance, f),
-    manual: (f = msg.getManual()) && proto.estafette.ci.manifest.v1.EstafetteManualEvent.toObject(includeInstance, f)
+    buildId: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -2304,23 +3627,23 @@ proto.estafette.ci.manifest.v1.EstafetteEvent.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildParamsConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.BuildParamsConfig.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteEvent;
-  return proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.BuildParamsConfig;
+  return proto.estafette.ci.contracts.v1.BuildParamsConfig.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.BuildParamsConfig} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
+ * @return {!proto.estafette.ci.contracts.v1.BuildParamsConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.BuildParamsConfig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2328,39 +3651,181 @@ proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.estafette.ci.manifest.v1.EstafettePipelineEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafettePipelineEvent.deserializeBinaryFromReader);
-      msg.setPipeline(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setBuildId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.BuildParamsConfig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.BuildParamsConfig.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.BuildParamsConfig} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildParamsConfig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBuildId();
+  if (f !== 0) {
+    writer.writeInt64(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int64 build_id = 1;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildParamsConfig.prototype.getBuildId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildParamsConfig.prototype.setBuildId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.BuildVersionConfig, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.BuildVersionConfig.displayName = 'proto.estafette.ci.contracts.v1.BuildVersionConfig';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuildVersionConfig.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.BuildVersionConfig} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    version: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    major: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    minor: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    patch: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    label: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    autoIncrement: jspb.Message.getFieldWithDefault(msg, 6, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.BuildVersionConfig}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.BuildVersionConfig;
+  return proto.estafette.ci.contracts.v1.BuildVersionConfig.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.BuildVersionConfig} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.BuildVersionConfig}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setVersion(value);
       break;
     case 2:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteReleaseEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.deserializeBinaryFromReader);
-      msg.setRelease(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setMajor(value);
       break;
     case 3:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteGitEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteGitEvent.deserializeBinaryFromReader);
-      msg.setGit(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setMinor(value);
       break;
     case 4:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteDockerEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteDockerEvent.deserializeBinaryFromReader);
-      msg.setDocker(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPatch(value);
       break;
     case 5:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteCronEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteCronEvent.deserializeBinaryFromReader);
-      msg.setCron(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLabel(value);
       break;
     case 6:
-      var value = new proto.estafette.ci.manifest.v1.EstafettePubSubEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafettePubSubEvent.deserializeBinaryFromReader);
-      msg.setPubSub(value);
-      break;
-    case 7:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteManualEvent;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteManualEvent.deserializeBinaryFromReader);
-      msg.setManual(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setAutoIncrement(value);
       break;
     default:
       reader.skipField();
@@ -2375,9 +3840,9 @@ proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.BuildVersionConfig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2385,453 +3850,51 @@ proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent} message
+ * @param {!proto.estafette.ci.contracts.v1.BuildVersionConfig} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.BuildVersionConfig.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPipeline();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getVersion();
+  if (f.length > 0) {
+    writer.writeString(
       1,
-      f,
-      proto.estafette.ci.manifest.v1.EstafettePipelineEvent.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getRelease();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getMajor();
+  if (f !== 0) {
+    writer.writeInt64(
       2,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteReleaseEvent.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getGit();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getMinor();
+  if (f !== 0) {
+    writer.writeInt64(
       3,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteGitEvent.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getDocker();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getPatch();
+  if (f.length > 0) {
+    writer.writeString(
       4,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteDockerEvent.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getCron();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getLabel();
+  if (f.length > 0) {
+    writer.writeString(
       5,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteCronEvent.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getPubSub();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getAutoIncrement();
+  if (f !== 0) {
+    writer.writeInt64(
       6,
-      f,
-      proto.estafette.ci.manifest.v1.EstafettePubSubEvent.serializeBinaryToWriter
-    );
-  }
-  f = message.getManual();
-  if (f != null) {
-    writer.writeMessage(
-      7,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteManualEvent.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional EstafettePipelineEvent pipeline = 1;
- * @return {?proto.estafette.ci.manifest.v1.EstafettePipelineEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getPipeline = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafettePipelineEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafettePipelineEvent, 1));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafettePipelineEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setPipeline = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearPipeline = function() {
-  this.setPipeline(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasPipeline = function() {
-  return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional EstafetteReleaseEvent release = 2;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteReleaseEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getRelease = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteReleaseEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteReleaseEvent, 2));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteReleaseEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setRelease = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearRelease = function() {
-  this.setRelease(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasRelease = function() {
-  return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional EstafetteGitEvent git = 3;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteGitEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getGit = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteGitEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteGitEvent, 3));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteGitEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setGit = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearGit = function() {
-  this.setGit(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasGit = function() {
-  return jspb.Message.getField(this, 3) != null;
-};
-
-
-/**
- * optional EstafetteDockerEvent docker = 4;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteDockerEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getDocker = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteDockerEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteDockerEvent, 4));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteDockerEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setDocker = function(value) {
-  jspb.Message.setWrapperField(this, 4, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearDocker = function() {
-  this.setDocker(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasDocker = function() {
-  return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional EstafetteCronEvent cron = 5;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteCronEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getCron = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteCronEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteCronEvent, 5));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteCronEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setCron = function(value) {
-  jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearCron = function() {
-  this.setCron(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasCron = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-/**
- * optional EstafettePubSubEvent pub_sub = 6;
- * @return {?proto.estafette.ci.manifest.v1.EstafettePubSubEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getPubSub = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafettePubSubEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafettePubSubEvent, 6));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafettePubSubEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setPubSub = function(value) {
-  jspb.Message.setWrapperField(this, 6, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearPubSub = function() {
-  this.setPubSub(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasPubSub = function() {
-  return jspb.Message.getField(this, 6) != null;
-};
-
-
-/**
- * optional EstafetteManualEvent manual = 7;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteManualEvent}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.getManual = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteManualEvent} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteManualEvent, 7));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteManualEvent|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.setManual = function(value) {
-  jspb.Message.setWrapperField(this, 7, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.clearManual = function() {
-  this.setManual(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteEvent.prototype.hasManual = function() {
-  return jspb.Message.getField(this, 7) != null;
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteGitTrigger, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteGitTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafetteGitTrigger';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteGitTrigger.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitTrigger} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    repository: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    branch: jspb.Message.getFieldWithDefault(msg, 3, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteGitTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteGitTrigger;
-  return proto.estafette.ci.manifest.v1.EstafetteGitTrigger.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitTrigger} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteGitTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setRepository(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBranch(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteGitTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteGitTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getEvent();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getRepository();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getBranch();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
       f
     );
   }
@@ -2839,195 +3902,321 @@ proto.estafette.ci.manifest.v1.EstafetteGitTrigger.serializeBinaryToWriter = fun
 
 
 /**
- * optional string event = 1;
+ * optional string version = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.getEvent = function() {
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getVersion = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.setEvent = function(value) {
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setVersion = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string repository = 2;
+ * optional int64 major = 2;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getMajor = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setMajor = function(value) {
+  jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int64 minor = 3;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getMinor = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setMinor = function(value) {
+  jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional string patch = 4;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.getRepository = function() {
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getPatch = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setPatch = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string label = 5;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getLabel = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setLabel = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional int64 auto_increment = 6;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.getAutoIncrement = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.BuildVersionConfig.prototype.setAutoIncrement = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.CiServerConfig, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.CiServerConfig.displayName = 'proto.estafette.ci.contracts.v1.CiServerConfig';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.CiServerConfig.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.CiServerConfig} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    baseUrl: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    builderEventsUrl: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    postLogsUrl: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    apiKey: jspb.Message.getFieldWithDefault(msg, 4, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.CiServerConfig}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.CiServerConfig;
+  return proto.estafette.ci.contracts.v1.CiServerConfig.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.CiServerConfig} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.CiServerConfig}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBaseUrl(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuilderEventsUrl(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPostLogsUrl(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setApiKey(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.CiServerConfig.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.CiServerConfig} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getBaseUrl();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getBuilderEventsUrl();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getPostLogsUrl();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getApiKey();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string base_url = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.getBaseUrl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.setBaseUrl = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string builder_events_url = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.getBuilderEventsUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.setRepository = function(value) {
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.setBuilderEventsUrl = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string branch = 3;
+ * optional string post_logs_url = 3;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.getBranch = function() {
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.getPostLogsUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteGitTrigger.prototype.setBranch = function(value) {
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.setPostLogsUrl = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteReleaseAction, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteReleaseAction.displayName = 'proto.estafette.ci.manifest.v1.EstafetteReleaseAction';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseAction.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteReleaseAction;
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseAction.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteReleaseAction.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string name = 1;
+ * optional string api_key = 4;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.getApiKey = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseAction.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+proto.estafette.ci.contracts.v1.CiServerConfig.prototype.setApiKey = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -3041,24 +4230,17 @@ proto.estafette.ci.manifest.v1.EstafetteReleaseAction.prototype.setName = functi
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteStage = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.manifest.v1.EstafetteStage.repeatedFields_, null);
+proto.estafette.ci.contracts.v1.CredentialConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteStage, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.CredentialConfig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteStage.displayName = 'proto.estafette.ci.manifest.v1.EstafetteStage';
+  proto.estafette.ci.contracts.v1.CredentialConfig.displayName = 'proto.estafette.ci.contracts.v1.CredentialConfig';
 }
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.repeatedFields_ = [5];
 
 
 
@@ -3075,8 +4257,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteStage.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.CredentialConfig.toObject(opt_includeInstance, this);
 };
 
 
@@ -3085,22 +4267,15 @@ proto.estafette.ci.manifest.v1.EstafetteStage.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteStage} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.CredentialConfig} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.CredentialConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    containerImage: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    shell: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    workingDirectory: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    commandsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
-    when: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    envVarsMap: (f = msg.getEnvVarsMap()) ? f.toObject(includeInstance, undefined) : [],
-    autoInjected: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
-    retries: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    customPropertiesMap: (f = msg.getCustomPropertiesMap()) ? f.toObject(includeInstance, proto.google.protobuf.Any.toObject) : []
+    type: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    additionalPropertiesMap: (f = msg.getAdditionalPropertiesMap()) ? f.toObject(includeInstance, proto.google.protobuf.Any.toObject) : []
   };
 
   if (includeInstance) {
@@ -3114,23 +4289,23 @@ proto.estafette.ci.manifest.v1.EstafetteStage.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteStage}
+ * @return {!proto.estafette.ci.contracts.v1.CredentialConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.CredentialConfig.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteStage;
-  return proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.CredentialConfig;
+  return proto.estafette.ci.contracts.v1.CredentialConfig.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteStage} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.CredentialConfig} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteStage}
+ * @return {!proto.estafette.ci.contracts.v1.CredentialConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.CredentialConfig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3143,40 +4318,10 @@ proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader = func
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setContainerImage(value);
+      msg.setType(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setShell(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setWorkingDirectory(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addCommands(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setWhen(value);
-      break;
-    case 7:
-      var value = msg.getEnvVarsMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
-         });
-      break;
-    case 8:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAutoInjected(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setRetries(value);
-      break;
-    case 10:
-      var value = msg.getCustomPropertiesMap();
+      var value = msg.getAdditionalPropertiesMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.google.protobuf.Any.deserializeBinaryFromReader, "");
          });
@@ -3194,9 +4339,9 @@ proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.CredentialConfig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3204,11 +4349,11 @@ proto.estafette.ci.manifest.v1.EstafetteStage.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteStage} message
+ * @param {!proto.estafette.ci.contracts.v1.CredentialConfig} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.CredentialConfig.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getName();
   if (f.length > 0) {
@@ -3217,62 +4362,16 @@ proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter = function
       f
     );
   }
-  f = message.getContainerImage();
+  f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getShell();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getWorkingDirectory();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getCommandsList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      5,
-      f
-    );
-  }
-  f = message.getWhen();
-  if (f.length > 0) {
-    writer.writeString(
-      6,
-      f
-    );
-  }
-  f = message.getEnvVarsMap(true);
+  f = message.getAdditionalPropertiesMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
-  }
-  f = message.getAutoInjected();
-  if (f) {
-    writer.writeBool(
-      8,
-      f
-    );
-  }
-  f = message.getRetries();
-  if (f !== 0) {
-    writer.writeInt64(
-      9,
-      f
-    );
-  }
-  f = message.getCustomPropertiesMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(10, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.google.protobuf.Any.serializeBinaryToWriter);
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.google.protobuf.Any.serializeBinaryToWriter);
   }
 };
 
@@ -3281,73 +4380,797 @@ proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter = function
  * optional string name = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getName = function() {
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setName = function(value) {
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string container_image = 2;
+ * optional string type = 2;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getContainerImage = function() {
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.getType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setContainerImage = function(value) {
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string shell = 3;
+ * map<string, google.protobuf.Any> additional_properties = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.google.protobuf.Any>}
+ */
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.getAdditionalPropertiesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.google.protobuf.Any>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      proto.google.protobuf.Any));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ */
+proto.estafette.ci.contracts.v1.CredentialConfig.prototype.clearAdditionalPropertiesMap = function() {
+  this.getAdditionalPropertiesMap().clear();
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.GitConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.GitConfig, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.GitConfig.displayName = 'proto.estafette.ci.contracts.v1.GitConfig';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.GitConfig.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.GitConfig} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.GitConfig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    repoSource: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    repoOwner: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    repoName: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    repoBranch: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    repoRevision: jspb.Message.getFieldWithDefault(msg, 5, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.GitConfig}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.GitConfig;
+  return proto.estafette.ci.contracts.v1.GitConfig.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.GitConfig} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.GitConfig}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoSource(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoOwner(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoName(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoBranch(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoRevision(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.GitConfig.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.GitConfig} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.GitConfig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRepoSource();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRepoOwner();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getRepoName();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getRepoBranch();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getRepoRevision();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string repo_source = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getShell = function() {
+proto.estafette.ci.contracts.v1.GitConfig.prototype.getRepoSource = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.setRepoSource = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string repo_owner = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.getRepoOwner = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.setRepoOwner = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string repo_name = 3;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.getRepoName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setShell = function(value) {
+proto.estafette.ci.contracts.v1.GitConfig.prototype.setRepoName = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional string working_directory = 4;
+ * optional string repo_branch = 4;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getWorkingDirectory = function() {
+proto.estafette.ci.contracts.v1.GitConfig.prototype.getRepoBranch = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setWorkingDirectory = function(value) {
+proto.estafette.ci.contracts.v1.GitConfig.prototype.setRepoBranch = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * repeated string commands = 5;
+ * optional string repo_revision = 5;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.getRepoRevision = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.GitConfig.prototype.setRepoRevision = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.ReleaseParamsConfig, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.ReleaseParamsConfig.displayName = 'proto.estafette.ci.contracts.v1.ReleaseParamsConfig';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.ReleaseParamsConfig.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseParamsConfig} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    releaseName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    releaseId: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    releaseAction: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    triggeredBy: jspb.Message.getFieldWithDefault(msg, 4, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseParamsConfig}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.ReleaseParamsConfig;
+  return proto.estafette.ci.contracts.v1.ReleaseParamsConfig.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseParamsConfig} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseParamsConfig}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseName(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setReleaseId(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseAction(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTriggeredBy(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.ReleaseParamsConfig.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseParamsConfig} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getReleaseName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getReleaseId();
+  if (f !== 0) {
+    writer.writeInt64(
+      2,
+      f
+    );
+  }
+  f = message.getReleaseAction();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getTriggeredBy();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string release_name = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.getReleaseName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.setReleaseName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional int64 release_id = 2;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.getReleaseId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.setReleaseId = function(value) {
+  jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional string release_action = 3;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.getReleaseAction = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.setReleaseAction = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string triggered_by = 4;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.getTriggeredBy = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseParamsConfig.prototype.setTriggeredBy = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.TrustedImageConfig.repeatedFields_, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.TrustedImageConfig, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.TrustedImageConfig.displayName = 'proto.estafette.ci.contracts.v1.TrustedImageConfig';
+}
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.repeatedFields_ = [5];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.TrustedImageConfig.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.TrustedImageConfig} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    imagePath: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    runPrivileged: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
+    runDocker: jspb.Message.getBooleanFieldWithDefault(msg, 3, false),
+    allowCommands: jspb.Message.getBooleanFieldWithDefault(msg, 4, false),
+    injectedCredentialTypesList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.TrustedImageConfig}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.TrustedImageConfig;
+  return proto.estafette.ci.contracts.v1.TrustedImageConfig.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.TrustedImageConfig} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.TrustedImageConfig}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setImagePath(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRunPrivileged(value);
+      break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRunDocker(value);
+      break;
+    case 4:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAllowCommands(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addInjectedCredentialTypes(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.TrustedImageConfig.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.TrustedImageConfig} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getImagePath();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRunPrivileged();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getRunDocker();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
+  f = message.getAllowCommands();
+  if (f) {
+    writer.writeBool(
+      4,
+      f
+    );
+  }
+  f = message.getInjectedCredentialTypesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string image_path = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.getImagePath = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.setImagePath = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool run_privileged = 2;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.getRunPrivileged = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.setRunPrivileged = function(value) {
+  jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional bool run_docker = 3;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.getRunDocker = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.setRunDocker = function(value) {
+  jspb.Message.setProto3BooleanField(this, 3, value);
+};
+
+
+/**
+ * optional bool allow_commands = 4;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.getAllowCommands = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 4, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.setAllowCommands = function(value) {
+  jspb.Message.setProto3BooleanField(this, 4, value);
+};
+
+
+/**
+ * repeated string injected_credential_types = 5;
  * @return {!Array<string>}
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getCommandsList = function() {
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.getInjectedCredentialTypesList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
 };
 
 
 /** @param {!Array<string>} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setCommandsList = function(value) {
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.setInjectedCredentialTypesList = function(value) {
   jspb.Message.setField(this, 5, value || []);
 };
 
@@ -3356,7 +5179,7 @@ proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setCommandsList = functi
  * @param {string} value
  * @param {number=} opt_index
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.addCommands = function(value, opt_index) {
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.addInjectedCredentialTypes = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 5, value, opt_index);
 };
 
@@ -3364,95 +5187,8 @@ proto.estafette.ci.manifest.v1.EstafetteStage.prototype.addCommands = function(v
 /**
  * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.clearCommandsList = function() {
-  this.setCommandsList([]);
-};
-
-
-/**
- * optional string when = 6;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getWhen = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setWhen = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
-};
-
-
-/**
- * map<string, string> env_vars = 7;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,string>}
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getEnvVarsMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
-      null));
-};
-
-
-/**
- * Clears values from the map. The map will be non-null.
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.clearEnvVarsMap = function() {
-  this.getEnvVarsMap().clear();
-};
-
-
-/**
- * optional bool auto_injected = 8;
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getAutoInjected = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
-};
-
-
-/** @param {boolean} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setAutoInjected = function(value) {
-  jspb.Message.setProto3BooleanField(this, 8, value);
-};
-
-
-/**
- * optional int64 retries = 9;
- * @return {number}
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getRetries = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
-};
-
-
-/** @param {number} value */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.setRetries = function(value) {
-  jspb.Message.setProto3IntField(this, 9, value);
-};
-
-
-/**
- * map<string, google.protobuf.Any> custom_properties = 10;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.google.protobuf.Any>}
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.getCustomPropertiesMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.google.protobuf.Any>} */ (
-      jspb.Message.getMapField(this, 10, opt_noLazyCreate,
-      proto.google.protobuf.Any));
-};
-
-
-/**
- * Clears values from the map. The map will be non-null.
- */
-proto.estafette.ci.manifest.v1.EstafetteStage.prototype.clearCustomPropertiesMap = function() {
-  this.getCustomPropertiesMap().clear();
+proto.estafette.ci.contracts.v1.TrustedImageConfig.prototype.clearInjectedCredentialTypesList = function() {
+  this.setInjectedCredentialTypesList([]);
 };
 
 
@@ -3466,17 +5202,24 @@ proto.estafette.ci.manifest.v1.EstafetteStage.prototype.clearCustomPropertiesMap
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.estafette.ci.contracts.v1.BuilderConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.BuilderConfig.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafettePipelineTrigger, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.BuilderConfig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafettePipelineTrigger';
+  proto.estafette.ci.contracts.v1.BuilderConfig.displayName = 'proto.estafette.ci.contracts.v1.BuilderConfig';
 }
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.repeatedFields_ = [8,14,15];
 
 
 
@@ -3493,8 +5236,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.BuilderConfig.toObject(opt_includeInstance, this);
 };
 
 
@@ -3503,16 +5246,30 @@ proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.toObject = fun
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineTrigger} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.BuilderConfig} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.BuilderConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    branch: jspb.Message.getFieldWithDefault(msg, 4, "")
+    action: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    track: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    registryMirror: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    dockerDaemonMtu: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    manifest: (f = msg.getManifest()) && proto.estafette.ci.manifest.v1.EstafetteManifest.toObject(includeInstance, f),
+    jobName: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    releaseName: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+    proto.estafette.ci.manifest.v1.EstafetteEvent.toObject, includeInstance),
+    ciServer: (f = msg.getCiServer()) && proto.estafette.ci.contracts.v1.CiServerConfig.toObject(includeInstance, f),
+    buildParams: (f = msg.getBuildParams()) && proto.estafette.ci.contracts.v1.BuildParamsConfig.toObject(includeInstance, f),
+    releaseParams: (f = msg.getReleaseParams()) && proto.estafette.ci.contracts.v1.ReleaseParamsConfig.toObject(includeInstance, f),
+    git: (f = msg.getGit()) && proto.estafette.ci.contracts.v1.GitConfig.toObject(includeInstance, f),
+    buildVersion: (f = msg.getBuildVersion()) && proto.estafette.ci.contracts.v1.BuildVersionConfig.toObject(includeInstance, f),
+    credentialsList: jspb.Message.toObjectList(msg.getCredentialsList(),
+    proto.estafette.ci.contracts.v1.CredentialConfig.toObject, includeInstance),
+    trustedImagesList: jspb.Message.toObjectList(msg.getTrustedImagesList(),
+    proto.estafette.ci.contracts.v1.TrustedImageConfig.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3526,23 +5283,23 @@ proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.toObject = function(incl
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePipelineTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.BuilderConfig}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.BuilderConfig.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafettePipelineTrigger;
-  return proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.BuilderConfig;
+  return proto.estafette.ci.contracts.v1.BuilderConfig.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineTrigger} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.BuilderConfig} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePipelineTrigger}
+ * @return {!proto.estafette.ci.contracts.v1.BuilderConfig}
  */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.BuilderConfig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3550,796 +5307,73 @@ proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.deserializeBinaryFromRea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBranch(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePipelineTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getEvent();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getBranch();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string event = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.getEvent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.setEvent = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string status = 2;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string name = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string branch = 4;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.getBranch = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.prototype.setBranch = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafettePubSubTrigger, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafettePubSubTrigger';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubTrigger} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    project: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    topic: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePubSubTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafettePubSubTrigger;
-  return proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubTrigger} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafettePubSubTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setProject(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTopic(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafettePubSubTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getProject();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getTopic();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string project = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.getProject = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.setProject = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string topic = 2;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.getTopic = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.prototype.setTopic = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    event: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    status: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    target: jspb.Message.getFieldWithDefault(msg, 4, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger;
-  return proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setEvent(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTarget(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getEvent();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getTarget();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string event = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.getEvent = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.setEvent = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string status = 2;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string name = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string target = 4;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.getTarget = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.prototype.setTarget = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.displayName = 'proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    branch: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction;
-  return proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBranch(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getBranch();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string branch = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.prototype.getBranch = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.prototype.setBranch = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.displayName = 'proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    target: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    action: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    version: jspb.Message.getFieldWithDefault(msg, 3, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction;
-  return proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setTarget(value);
-      break;
-    case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setAction(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTrack(value);
+      break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setVersion(value);
+      msg.setRegistryMirror(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDockerDaemonMtu(value);
+      break;
+    case 5:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteManifest;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinaryFromReader);
+      msg.setManifest(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setJobName(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseName(value);
+      break;
+    case 8:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteEvent;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader);
+      msg.addEvents(value);
+      break;
+    case 9:
+      var value = new proto.estafette.ci.contracts.v1.CiServerConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.CiServerConfig.deserializeBinaryFromReader);
+      msg.setCiServer(value);
+      break;
+    case 10:
+      var value = new proto.estafette.ci.contracts.v1.BuildParamsConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildParamsConfig.deserializeBinaryFromReader);
+      msg.setBuildParams(value);
+      break;
+    case 11:
+      var value = new proto.estafette.ci.contracts.v1.ReleaseParamsConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.ReleaseParamsConfig.deserializeBinaryFromReader);
+      msg.setReleaseParams(value);
+      break;
+    case 12:
+      var value = new proto.estafette.ci.contracts.v1.GitConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.GitConfig.deserializeBinaryFromReader);
+      msg.setGit(value);
+      break;
+    case 13:
+      var value = new proto.estafette.ci.contracts.v1.BuildVersionConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildVersionConfig.deserializeBinaryFromReader);
+      msg.setBuildVersion(value);
+      break;
+    case 14:
+      var value = new proto.estafette.ci.contracts.v1.CredentialConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.CredentialConfig.deserializeBinaryFromReader);
+      msg.addCredentials(value);
+      break;
+    case 15:
+      var value = new proto.estafette.ci.contracts.v1.TrustedImageConfig;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.TrustedImageConfig.deserializeBinaryFromReader);
+      msg.addTrustedImages(value);
       break;
     default:
       reader.skipField();
@@ -4354,9 +5388,9 @@ proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.deserializeBinaryFr
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.BuilderConfig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4364,335 +5398,210 @@ proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.serialize
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction} message
+ * @param {!proto.estafette.ci.contracts.v1.BuilderConfig} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.BuilderConfig.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTarget();
+  f = message.getAction();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getAction();
+  f = message.getTrack();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getVersion();
+  f = message.getRegistryMirror();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-};
-
-
-/**
- * optional string target = 1;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.getTarget = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.setTarget = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string action = 2;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.getAction = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.setAction = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string version = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.prototype.setVersion = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteTrigger, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteTrigger.displayName = 'proto.estafette.ci.manifest.v1.EstafetteTrigger';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteTrigger.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTrigger} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    pipeline: (f = msg.getPipeline()) && proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.toObject(includeInstance, f),
-    release: (f = msg.getRelease()) && proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.toObject(includeInstance, f),
-    git: (f = msg.getGit()) && proto.estafette.ci.manifest.v1.EstafetteGitTrigger.toObject(includeInstance, f),
-    docker: (f = msg.getDocker()) && proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.toObject(includeInstance, f),
-    cron: (f = msg.getCron()) && proto.estafette.ci.manifest.v1.EstafetteCronTrigger.toObject(includeInstance, f),
-    pubSub: (f = msg.getPubSub()) && proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.toObject(includeInstance, f),
-    buildAction: (f = msg.getBuildAction()) && proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.toObject(includeInstance, f),
-    releaseAction: (f = msg.getReleaseAction()) && proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.toObject(includeInstance, f)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteTrigger;
-  return proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTrigger} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.estafette.ci.manifest.v1.EstafettePipelineTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.deserializeBinaryFromReader);
-      msg.setPipeline(value);
-      break;
-    case 2:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.deserializeBinaryFromReader);
-      msg.setRelease(value);
-      break;
-    case 3:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteGitTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteGitTrigger.deserializeBinaryFromReader);
-      msg.setGit(value);
-      break;
-    case 4:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteDockerTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.deserializeBinaryFromReader);
-      msg.setDocker(value);
-      break;
-    case 5:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteCronTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteCronTrigger.deserializeBinaryFromReader);
-      msg.setCron(value);
-      break;
-    case 6:
-      var value = new proto.estafette.ci.manifest.v1.EstafettePubSubTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.deserializeBinaryFromReader);
-      msg.setPubSub(value);
-      break;
-    case 7:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.deserializeBinaryFromReader);
-      msg.setBuildAction(value);
-      break;
-    case 8:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.deserializeBinaryFromReader);
-      msg.setReleaseAction(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteTrigger.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTrigger} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getPipeline();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      proto.estafette.ci.manifest.v1.EstafettePipelineTrigger.serializeBinaryToWriter
+  f = message.getDockerDaemonMtu();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
     );
   }
-  f = message.getRelease();
+  f = message.getManifest();
   if (f != null) {
     writer.writeMessage(
-      2,
+      5,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger.serializeBinaryToWriter
+      proto.estafette.ci.manifest.v1.EstafetteManifest.serializeBinaryToWriter
+    );
+  }
+  f = message.getJobName();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getReleaseName();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getEventsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      8,
+      f,
+      proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter
+    );
+  }
+  f = message.getCiServer();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      proto.estafette.ci.contracts.v1.CiServerConfig.serializeBinaryToWriter
+    );
+  }
+  f = message.getBuildParams();
+  if (f != null) {
+    writer.writeMessage(
+      10,
+      f,
+      proto.estafette.ci.contracts.v1.BuildParamsConfig.serializeBinaryToWriter
+    );
+  }
+  f = message.getReleaseParams();
+  if (f != null) {
+    writer.writeMessage(
+      11,
+      f,
+      proto.estafette.ci.contracts.v1.ReleaseParamsConfig.serializeBinaryToWriter
     );
   }
   f = message.getGit();
   if (f != null) {
     writer.writeMessage(
-      3,
+      12,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteGitTrigger.serializeBinaryToWriter
+      proto.estafette.ci.contracts.v1.GitConfig.serializeBinaryToWriter
     );
   }
-  f = message.getDocker();
+  f = message.getBuildVersion();
   if (f != null) {
     writer.writeMessage(
-      4,
+      13,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteDockerTrigger.serializeBinaryToWriter
+      proto.estafette.ci.contracts.v1.BuildVersionConfig.serializeBinaryToWriter
     );
   }
-  f = message.getCron();
-  if (f != null) {
-    writer.writeMessage(
-      5,
+  f = message.getCredentialsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      14,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteCronTrigger.serializeBinaryToWriter
+      proto.estafette.ci.contracts.v1.CredentialConfig.serializeBinaryToWriter
     );
   }
-  f = message.getPubSub();
-  if (f != null) {
-    writer.writeMessage(
-      6,
+  f = message.getTrustedImagesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      15,
       f,
-      proto.estafette.ci.manifest.v1.EstafettePubSubTrigger.serializeBinaryToWriter
-    );
-  }
-  f = message.getBuildAction();
-  if (f != null) {
-    writer.writeMessage(
-      7,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction.serializeBinaryToWriter
-    );
-  }
-  f = message.getReleaseAction();
-  if (f != null) {
-    writer.writeMessage(
-      8,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction.serializeBinaryToWriter
+      proto.estafette.ci.contracts.v1.TrustedImageConfig.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional EstafettePipelineTrigger pipeline = 1;
- * @return {?proto.estafette.ci.manifest.v1.EstafettePipelineTrigger}
+ * optional string action = 1;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getPipeline = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafettePipelineTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafettePipelineTrigger, 1));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getAction = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafettePipelineTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setPipeline = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setAction = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string track = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getTrack = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setTrack = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string registry_mirror = 3;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getRegistryMirror = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setRegistryMirror = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string docker_daemon_mtu = 4;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getDockerDaemonMtu = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setDockerDaemonMtu = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional estafette.ci.manifest.v1.EstafetteManifest manifest = 5;
+ * @return {?proto.estafette.ci.manifest.v1.EstafetteManifest}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getManifest = function() {
+  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteManifest} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteManifest, 5));
+};
+
+
+/** @param {?proto.estafette.ci.manifest.v1.EstafetteManifest|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setManifest = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearPipeline = function() {
-  this.setPipeline(undefined);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearManifest = function() {
+  this.setManifest(undefined);
 };
 
 
@@ -4700,32 +5609,96 @@ proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearPipeline = functi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasPipeline = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasManifest = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * optional EstafetteReleaseTrigger release = 2;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger}
+ * optional string job_name = 6;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getRelease = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger, 2));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getJobName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteReleaseTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setRelease = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setJobName = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string release_name = 7;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getReleaseName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setReleaseName = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * repeated estafette.ci.manifest.v1.EstafetteEvent events = 8;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getEventsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteEvent, 8));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setEventsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 8, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.addEvents = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.estafette.ci.manifest.v1.EstafetteEvent, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearEventsList = function() {
+  this.setEventsList([]);
+};
+
+
+/**
+ * optional CiServerConfig ci_server = 9;
+ * @return {?proto.estafette.ci.contracts.v1.CiServerConfig}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getCiServer = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.CiServerConfig} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.CiServerConfig, 9));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.CiServerConfig|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setCiServer = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearRelease = function() {
-  this.setRelease(undefined);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearCiServer = function() {
+  this.setCiServer(undefined);
 };
 
 
@@ -4733,31 +5706,97 @@ proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearRelease = functio
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasRelease = function() {
-  return jspb.Message.getField(this, 2) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasCiServer = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
 /**
- * optional EstafetteGitTrigger git = 3;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteGitTrigger}
+ * optional BuildParamsConfig build_params = 10;
+ * @return {?proto.estafette.ci.contracts.v1.BuildParamsConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getGit = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteGitTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteGitTrigger, 3));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getBuildParams = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.BuildParamsConfig} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.BuildParamsConfig, 10));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteGitTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setGit = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
+/** @param {?proto.estafette.ci.contracts.v1.BuildParamsConfig|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setBuildParams = function(value) {
+  jspb.Message.setWrapperField(this, 10, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearGit = function() {
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearBuildParams = function() {
+  this.setBuildParams(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasBuildParams = function() {
+  return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional ReleaseParamsConfig release_params = 11;
+ * @return {?proto.estafette.ci.contracts.v1.ReleaseParamsConfig}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getReleaseParams = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.ReleaseParamsConfig} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.ReleaseParamsConfig, 11));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.ReleaseParamsConfig|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setReleaseParams = function(value) {
+  jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearReleaseParams = function() {
+  this.setReleaseParams(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasReleaseParams = function() {
+  return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional GitConfig git = 12;
+ * @return {?proto.estafette.ci.contracts.v1.GitConfig}
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getGit = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.GitConfig} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.GitConfig, 12));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.GitConfig|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setGit = function(value) {
+  jspb.Message.setWrapperField(this, 12, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearGit = function() {
   this.setGit(undefined);
 };
 
@@ -4766,32 +5805,32 @@ proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearGit = function() 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasGit = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasGit = function() {
+  return jspb.Message.getField(this, 12) != null;
 };
 
 
 /**
- * optional EstafetteDockerTrigger docker = 4;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteDockerTrigger}
+ * optional BuildVersionConfig build_version = 13;
+ * @return {?proto.estafette.ci.contracts.v1.BuildVersionConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getDocker = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteDockerTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteDockerTrigger, 4));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getBuildVersion = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.BuildVersionConfig} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.BuildVersionConfig, 13));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteDockerTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setDocker = function(value) {
-  jspb.Message.setWrapperField(this, 4, value);
+/** @param {?proto.estafette.ci.contracts.v1.BuildVersionConfig|undefined} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setBuildVersion = function(value) {
+  jspb.Message.setWrapperField(this, 13, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearDocker = function() {
-  this.setDocker(undefined);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearBuildVersion = function() {
+  this.setBuildVersion(undefined);
 };
 
 
@@ -4799,140 +5838,76 @@ proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearDocker = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasDocker = function() {
-  return jspb.Message.getField(this, 4) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.hasBuildVersion = function() {
+  return jspb.Message.getField(this, 13) != null;
 };
 
 
 /**
- * optional EstafetteCronTrigger cron = 5;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteCronTrigger}
+ * repeated CredentialConfig credentials = 14;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.CredentialConfig>}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getCron = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteCronTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteCronTrigger, 5));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getCredentialsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.CredentialConfig>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.CredentialConfig, 14));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteCronTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setCron = function(value) {
-  jspb.Message.setWrapperField(this, 5, value);
+/** @param {!Array<!proto.estafette.ci.contracts.v1.CredentialConfig>} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setCredentialsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.estafette.ci.contracts.v1.CredentialConfig=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.CredentialConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearCron = function() {
-  this.setCron(undefined);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.addCredentials = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.estafette.ci.contracts.v1.CredentialConfig, opt_index);
 };
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasCron = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearCredentialsList = function() {
+  this.setCredentialsList([]);
 };
 
 
 /**
- * optional EstafettePubSubTrigger pub_sub = 6;
- * @return {?proto.estafette.ci.manifest.v1.EstafettePubSubTrigger}
+ * repeated TrustedImageConfig trusted_images = 15;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.TrustedImageConfig>}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getPubSub = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafettePubSubTrigger} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafettePubSubTrigger, 6));
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.getTrustedImagesList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.TrustedImageConfig>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.TrustedImageConfig, 15));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafettePubSubTrigger|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setPubSub = function(value) {
-  jspb.Message.setWrapperField(this, 6, value);
+/** @param {!Array<!proto.estafette.ci.contracts.v1.TrustedImageConfig>} value */
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.setTrustedImagesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 15, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.estafette.ci.contracts.v1.TrustedImageConfig=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.TrustedImageConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearPubSub = function() {
-  this.setPubSub(undefined);
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.addTrustedImages = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.estafette.ci.contracts.v1.TrustedImageConfig, opt_index);
 };
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasPubSub = function() {
-  return jspb.Message.getField(this, 6) != null;
-};
-
-
-/**
- * optional EstafetteTriggerBuildAction build_action = 7;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getBuildAction = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction, 7));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteTriggerBuildAction|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setBuildAction = function(value) {
-  jspb.Message.setWrapperField(this, 7, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearBuildAction = function() {
-  this.setBuildAction(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasBuildAction = function() {
-  return jspb.Message.getField(this, 7) != null;
-};
-
-
-/**
- * optional EstafetteTriggerReleaseAction release_action = 8;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.getReleaseAction = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction, 8));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteTriggerReleaseAction|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.setReleaseAction = function(value) {
-  jspb.Message.setWrapperField(this, 8, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.clearReleaseAction = function() {
-  this.setReleaseAction(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasReleaseAction = function() {
-  return jspb.Message.getField(this, 8) != null;
+proto.estafette.ci.contracts.v1.BuilderConfig.prototype.clearTrustedImagesList = function() {
+  this.setTrustedImagesList([]);
 };
 
 
@@ -4946,24 +5921,17 @@ proto.estafette.ci.manifest.v1.EstafetteTrigger.prototype.hasReleaseAction = fun
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.manifest.v1.EstafetteRelease.repeatedFields_, null);
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteRelease, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteRelease.displayName = 'proto.estafette.ci.manifest.v1.EstafetteRelease';
+  proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.displayName = 'proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig';
 }
-
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.repeatedFields_ = [3,4,5];
 
 
 
@@ -4980,8 +5948,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteRelease.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.toObject(opt_includeInstance, this);
 };
 
 
@@ -4990,20 +5958,15 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteRelease} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    cloneRepository: jspb.Message.getBooleanFieldWithDefault(msg, 2, false),
-    actionsList: jspb.Message.toObjectList(msg.getActionsList(),
-    proto.estafette.ci.manifest.v1.EstafetteReleaseAction.toObject, includeInstance),
-    triggersList: jspb.Message.toObjectList(msg.getTriggersList(),
-    proto.estafette.ci.manifest.v1.EstafetteTrigger.toObject, includeInstance),
-    stagesList: jspb.Message.toObjectList(msg.getStagesList(),
-    proto.estafette.ci.manifest.v1.EstafetteStage.toObject, includeInstance)
+    repository: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    username: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    password: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -5017,23 +5980,23 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteRelease}
+ * @return {!proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteRelease;
-  return proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig;
+  return proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteRelease} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteRelease}
+ * @return {!proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5042,26 +6005,15 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinaryFromReader = fu
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setRepository(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setCloneRepository(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUsername(value);
       break;
     case 3:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteReleaseAction;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteReleaseAction.deserializeBinaryFromReader);
-      msg.addActions(value);
-      break;
-    case 4:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteTrigger;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinaryFromReader);
-      msg.addTriggers(value);
-      break;
-    case 5:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteStage;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader);
-      msg.addStages(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPassword(value);
       break;
     default:
       reader.skipField();
@@ -5076,9 +6028,9 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteRelease.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5086,182 +6038,78 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteRelease} message
+ * @param {!proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
+  f = message.getRepository();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getCloneRepository();
-  if (f) {
-    writer.writeBool(
+  f = message.getUsername();
+  if (f.length > 0) {
+    writer.writeString(
       2,
       f
     );
   }
-  f = message.getActionsList();
+  f = message.getPassword();
   if (f.length > 0) {
-    writer.writeRepeatedMessage(
+    writer.writeString(
       3,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteReleaseAction.serializeBinaryToWriter
-    );
-  }
-  f = message.getTriggersList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      4,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteTrigger.serializeBinaryToWriter
-    );
-  }
-  f = message.getStagesList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      5,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter
+      f
     );
   }
 };
 
 
 /**
- * optional string name = 1;
+ * optional string repository = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.getName = function() {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.getRepository = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.setName = function(value) {
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.setRepository = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional bool clone_repository = 2;
- * @return {boolean}
+ * optional string username = 2;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.getCloneRepository = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.getUsername = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {boolean} value */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.setCloneRepository = function(value) {
-  jspb.Message.setProto3BooleanField(this, 2, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.setUsername = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * repeated EstafetteReleaseAction actions = 3;
- * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>}
+ * optional string password = 3;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.getActionsList = function() {
-  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteReleaseAction, 3));
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.getPassword = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
-/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteReleaseAction>} value */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.setActionsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 3, value);
-};
-
-
-/**
- * @param {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction=} opt_value
- * @param {number=} opt_index
- * @return {!proto.estafette.ci.manifest.v1.EstafetteReleaseAction}
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.addActions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.estafette.ci.manifest.v1.EstafetteReleaseAction, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.clearActionsList = function() {
-  this.setActionsList([]);
-};
-
-
-/**
- * repeated EstafetteTrigger triggers = 4;
- * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>}
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.getTriggersList = function() {
-  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTrigger, 4));
-};
-
-
-/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} value */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.setTriggersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 4, value);
-};
-
-
-/**
- * @param {!proto.estafette.ci.manifest.v1.EstafetteTrigger=} opt_value
- * @param {number=} opt_index
- * @return {!proto.estafette.ci.manifest.v1.EstafetteTrigger}
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.addTriggers = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.estafette.ci.manifest.v1.EstafetteTrigger, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.clearTriggersList = function() {
-  this.setTriggersList([]);
-};
-
-
-/**
- * repeated EstafetteStage stages = 5;
- * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>}
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.getStagesList = function() {
-  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteStage, 5));
-};
-
-
-/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>} value */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.setStagesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 5, value);
-};
-
-
-/**
- * @param {!proto.estafette.ci.manifest.v1.EstafetteStage=} opt_value
- * @param {number=} opt_index
- * @return {!proto.estafette.ci.manifest.v1.EstafetteStage}
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.addStages = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.estafette.ci.manifest.v1.EstafetteStage, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- */
-proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.clearStagesList = function() {
-  this.setStagesList([]);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ContainerRepositoryCredentialConfig.prototype.setPassword = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -5275,16 +6123,245 @@ proto.estafette.ci.manifest.v1.EstafetteRelease.prototype.clearStagesList = func
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.manifest.v1.StringOrStringArray.repeatedFields_, null);
+proto.estafette.ci.contracts.v1.Pagination = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.StringOrStringArray, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.Pagination, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.StringOrStringArray.displayName = 'proto.estafette.ci.manifest.v1.StringOrStringArray';
+  proto.estafette.ci.contracts.v1.Pagination.displayName = 'proto.estafette.ci.contracts.v1.Pagination';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Pagination.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.Pagination} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.Pagination.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    page: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    size: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    totalPages: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    totalItems: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.Pagination}
+ */
+proto.estafette.ci.contracts.v1.Pagination.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.Pagination;
+  return proto.estafette.ci.contracts.v1.Pagination.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.Pagination} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.Pagination}
+ */
+proto.estafette.ci.contracts.v1.Pagination.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setPage(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setSize(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setTotalPages(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setTotalItems(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.Pagination.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.Pagination} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.Pagination.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPage();
+  if (f !== 0) {
+    writer.writeInt64(
+      1,
+      f
+    );
+  }
+  f = message.getSize();
+  if (f !== 0) {
+    writer.writeInt64(
+      2,
+      f
+    );
+  }
+  f = message.getTotalPages();
+  if (f !== 0) {
+    writer.writeInt64(
+      3,
+      f
+    );
+  }
+  f = message.getTotalItems();
+  if (f !== 0) {
+    writer.writeInt64(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int64 page = 1;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.getPage = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.Pagination.prototype.setPage = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional int64 size = 2;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.getSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.Pagination.prototype.setSize = function(value) {
+  jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional int64 total_pages = 3;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.getTotalPages = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.Pagination.prototype.setTotalPages = function(value) {
+  jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int64 total_items = 4;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.Pagination.prototype.getTotalItems = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.Pagination.prototype.setTotalItems = function(value) {
+  jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.ListResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.ListResponse.repeatedFields_, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.ListResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.ListResponse.displayName = 'proto.estafette.ci.contracts.v1.ListResponse';
 }
 
 /**
@@ -5292,7 +6369,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.repeatedFields_ = [1];
+proto.estafette.ci.contracts.v1.ListResponse.repeatedFields_ = [1];
 
 
 
@@ -5309,8 +6386,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.StringOrStringArray.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.ListResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.ListResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5319,13 +6396,15 @@ proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.toObject = function
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.StringOrStringArray} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.ListResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.ListResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valuesList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+    itemsList: jspb.Message.toObjectList(msg.getItemsList(),
+    proto.google.protobuf.Any.toObject, includeInstance),
+    pagination: (f = msg.getPagination()) && proto.estafette.ci.contracts.v1.Pagination.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5339,23 +6418,23 @@ proto.estafette.ci.manifest.v1.StringOrStringArray.toObject = function(includeIn
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.StringOrStringArray}
+ * @return {!proto.estafette.ci.contracts.v1.ListResponse}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.ListResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.StringOrStringArray;
-  return proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.ListResponse;
+  return proto.estafette.ci.contracts.v1.ListResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.StringOrStringArray} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.ListResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.StringOrStringArray}
+ * @return {!proto.estafette.ci.contracts.v1.ListResponse}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.ListResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5363,8 +6442,14 @@ proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinaryFromReader =
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addValues(value);
+      var value = new proto.google.protobuf.Any;
+      reader.readMessage(value,proto.google.protobuf.Any.deserializeBinaryFromReader);
+      msg.addItems(value);
+      break;
+    case 2:
+      var value = new proto.estafette.ci.contracts.v1.Pagination;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.Pagination.deserializeBinaryFromReader);
+      msg.setPagination(value);
       break;
     default:
       reader.skipField();
@@ -5379,9 +6464,9 @@ proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinaryFromReader =
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.ListResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.StringOrStringArray.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.ListResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5389,524 +6474,77 @@ proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.serializeBinary = f
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.StringOrStringArray} message
+ * @param {!proto.estafette.ci.contracts.v1.ListResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.ListResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValuesList();
+  f = message.getItemsList();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeRepeatedMessage(
       1,
-      f
+      f,
+      proto.google.protobuf.Any.serializeBinaryToWriter
+    );
+  }
+  f = message.getPagination();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.estafette.ci.contracts.v1.Pagination.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated string values = 1;
- * @return {!Array<string>}
+ * repeated google.protobuf.Any items = 1;
+ * @return {!Array<!proto.google.protobuf.Any>}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.getValuesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+proto.estafette.ci.contracts.v1.ListResponse.prototype.getItemsList = function() {
+  return /** @type{!Array<!proto.google.protobuf.Any>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.google.protobuf.Any, 1));
 };
 
 
-/** @param {!Array<string>} value */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.setValuesList = function(value) {
-  jspb.Message.setField(this, 1, value || []);
+/** @param {!Array<!proto.google.protobuf.Any>} value */
+proto.estafette.ci.contracts.v1.ListResponse.prototype.setItemsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {string} value
+ * @param {!proto.google.protobuf.Any=} opt_value
  * @param {number=} opt_index
+ * @return {!proto.google.protobuf.Any}
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.addValues = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+proto.estafette.ci.contracts.v1.ListResponse.prototype.addItems = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.google.protobuf.Any, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.StringOrStringArray.prototype.clearValuesList = function() {
-  this.setValuesList([]);
+proto.estafette.ci.contracts.v1.ListResponse.prototype.clearItemsList = function() {
+  this.setItemsList([]);
 };
 
 
 /**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
+ * optional Pagination pagination = 2;
+ * @return {?proto.estafette.ci.contracts.v1.Pagination}
  */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteSemverVersion, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteSemverVersion.displayName = 'proto.estafette.ci.manifest.v1.EstafetteSemverVersion';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteSemverVersion.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.ListResponse.prototype.getPagination = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.Pagination} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.Pagination, 2));
 };
 
 
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteSemverVersion} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    major: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    minor: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    patch: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    labelTemplate: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    releaseBranch: (f = msg.getReleaseBranch()) && proto.estafette.ci.manifest.v1.StringOrStringArray.toObject(includeInstance, f)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteSemverVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteSemverVersion;
-  return proto.estafette.ci.manifest.v1.EstafetteSemverVersion.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteSemverVersion} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteSemverVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMajor(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMinor(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPatch(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLabelTemplate(value);
-      break;
-    case 5:
-      var value = new proto.estafette.ci.manifest.v1.StringOrStringArray;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.StringOrStringArray.deserializeBinaryFromReader);
-      msg.setReleaseBranch(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteSemverVersion.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteSemverVersion} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getMajor();
-  if (f !== 0) {
-    writer.writeInt64(
-      1,
-      f
-    );
-  }
-  f = message.getMinor();
-  if (f !== 0) {
-    writer.writeInt64(
-      2,
-      f
-    );
-  }
-  f = message.getPatch();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getLabelTemplate();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getReleaseBranch();
-  if (f != null) {
-    writer.writeMessage(
-      5,
-      f,
-      proto.estafette.ci.manifest.v1.StringOrStringArray.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional int64 major = 1;
- * @return {number}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.getMajor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/** @param {number} value */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.setMajor = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-/**
- * optional int64 minor = 2;
- * @return {number}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.getMinor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.setMinor = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
-};
-
-
-/**
- * optional string patch = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.getPatch = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.setPatch = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string label_template = 4;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.getLabelTemplate = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.setLabelTemplate = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional StringOrStringArray release_branch = 5;
- * @return {?proto.estafette.ci.manifest.v1.StringOrStringArray}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.getReleaseBranch = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.StringOrStringArray} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.StringOrStringArray, 5));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.StringOrStringArray|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.setReleaseBranch = function(value) {
-  jspb.Message.setWrapperField(this, 5, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.clearReleaseBranch = function() {
-  this.setReleaseBranch(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteSemverVersion.prototype.hasReleaseBranch = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteVersion, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  /**
-   * @public
-   * @override
-   */
-  proto.estafette.ci.manifest.v1.EstafetteVersion.displayName = 'proto.estafette.ci.manifest.v1.EstafetteVersion';
-}
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteVersion.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersion} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    semver: (f = msg.getSemver()) && proto.estafette.ci.manifest.v1.EstafetteSemverVersion.toObject(includeInstance, f),
-    custom: (f = msg.getCustom()) && proto.estafette.ci.manifest.v1.EstafetteCustomVersion.toObject(includeInstance, f)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteVersion;
-  return proto.estafette.ci.manifest.v1.EstafetteVersion.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersion} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteSemverVersion;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteSemverVersion.deserializeBinaryFromReader);
-      msg.setSemver(value);
-      break;
-    case 2:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteCustomVersion;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteCustomVersion.deserializeBinaryFromReader);
-      msg.setCustom(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteVersion.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersion} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getSemver();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteSemverVersion.serializeBinaryToWriter
-    );
-  }
-  f = message.getCustom();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteCustomVersion.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional EstafetteSemverVersion semver = 1;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteSemverVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.getSemver = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteSemverVersion} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteSemverVersion, 1));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteSemverVersion|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.setSemver = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.clearSemver = function() {
-  this.setSemver(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.hasSemver = function() {
-  return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional EstafetteCustomVersion custom = 2;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteCustomVersion}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.getCustom = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteCustomVersion} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteCustomVersion, 2));
-};
-
-
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteCustomVersion|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.setCustom = function(value) {
+/** @param {?proto.estafette.ci.contracts.v1.Pagination|undefined} value */
+proto.estafette.ci.contracts.v1.ListResponse.prototype.setPagination = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
@@ -5914,8 +6552,8 @@ proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.setCustom = function(v
 /**
  * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.clearCustom = function() {
-  this.setCustom(undefined);
+proto.estafette.ci.contracts.v1.ListResponse.prototype.clearPagination = function() {
+  this.setPagination(undefined);
 };
 
 
@@ -5923,7 +6561,7 @@ proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.clearCustom = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.hasCustom = function() {
+proto.estafette.ci.contracts.v1.ListResponse.prototype.hasPagination = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -5938,16 +6576,16 @@ proto.estafette.ci.manifest.v1.EstafetteVersion.prototype.hasCustom = function()
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.manifest.v1.EstafetteManifest.repeatedFields_, null);
+proto.estafette.ci.contracts.v1.Pipeline = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.Pipeline.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteManifest, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.Pipeline, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteManifest.displayName = 'proto.estafette.ci.manifest.v1.EstafetteManifest';
+  proto.estafette.ci.contracts.v1.Pipeline.displayName = 'proto.estafette.ci.contracts.v1.Pipeline';
 }
 
 /**
@@ -5955,7 +6593,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.repeatedFields_ = [5,6,7];
+proto.estafette.ci.contracts.v1.Pipeline.repeatedFields_ = [9,10,13,14,15];
 
 
 
@@ -5972,8 +6610,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteManifest.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Pipeline.toObject(opt_includeInstance, this);
 };
 
 
@@ -5982,22 +6620,36 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManifest} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.Pipeline} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.Pipeline.toObject = function(includeInstance, msg) {
   var f, obj = {
-    builder: (f = msg.getBuilder()) && proto.estafette.ci.manifest.v1.EstafetteBuilder.toObject(includeInstance, f),
-    labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : [],
-    version: (f = msg.getVersion()) && proto.estafette.ci.manifest.v1.EstafetteVersion.toObject(includeInstance, f),
-    globalEnvVarsMap: (f = msg.getGlobalEnvVarsMap()) ? f.toObject(includeInstance, undefined) : [],
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    repoSource: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    repoOwner: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    repoName: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    repoBranch: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    repoRevision: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    buildVersion: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    buildStatus: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    labelsList: jspb.Message.toObjectList(msg.getLabelsList(),
+    proto.estafette.ci.contracts.v1.Label.toObject, includeInstance),
+    releaseTargetsList: jspb.Message.toObjectList(msg.getReleaseTargetsList(),
+    proto.estafette.ci.contracts.v1.ReleaseTarget.toObject, includeInstance),
+    manifest: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    manifestWithDefaults: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    commitsList: jspb.Message.toObjectList(msg.getCommitsList(),
+    proto.estafette.ci.contracts.v1.GitCommit.toObject, includeInstance),
     triggersList: jspb.Message.toObjectList(msg.getTriggersList(),
     proto.estafette.ci.manifest.v1.EstafetteTrigger.toObject, includeInstance),
-    stagesList: jspb.Message.toObjectList(msg.getStagesList(),
-    proto.estafette.ci.manifest.v1.EstafetteStage.toObject, includeInstance),
-    releasesList: jspb.Message.toObjectList(msg.getReleasesList(),
-    proto.estafette.ci.manifest.v1.EstafetteRelease.toObject, includeInstance)
+    eventsList: jspb.Message.toObjectList(msg.getEventsList(),
+    proto.estafette.ci.manifest.v1.EstafetteEvent.toObject, includeInstance),
+    insertedAtTime: (f = msg.getInsertedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    updatedAtTime: (f = msg.getUpdatedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f),
+    duration: (f = msg.getDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f),
+    lastUpdatedAtTime: (f = msg.getLastUpdatedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -6011,23 +6663,23 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteManifest}
+ * @return {!proto.estafette.ci.contracts.v1.Pipeline}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.Pipeline.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteManifest;
-  return proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.Pipeline;
+  return proto.estafette.ci.contracts.v1.Pipeline.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManifest} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.Pipeline} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteManifest}
+ * @return {!proto.estafette.ci.contracts.v1.Pipeline}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.Pipeline.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6035,41 +6687,89 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinaryFromReader = f
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteBuilder;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteBuilder.deserializeBinaryFromReader);
-      msg.setBuilder(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
       break;
     case 2:
-      var value = msg.getLabelsMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
-         });
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoSource(value);
       break;
     case 3:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteVersion;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteVersion.deserializeBinaryFromReader);
-      msg.setVersion(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoOwner(value);
       break;
     case 4:
-      var value = msg.getGlobalEnvVarsMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
-         });
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoName(value);
       break;
     case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoBranch(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoRevision(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuildVersion(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBuildStatus(value);
+      break;
+    case 9:
+      var value = new proto.estafette.ci.contracts.v1.Label;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.Label.deserializeBinaryFromReader);
+      msg.addLabels(value);
+      break;
+    case 10:
+      var value = new proto.estafette.ci.contracts.v1.ReleaseTarget;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.ReleaseTarget.deserializeBinaryFromReader);
+      msg.addReleaseTargets(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setManifest(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setManifestWithDefaults(value);
+      break;
+    case 13:
+      var value = new proto.estafette.ci.contracts.v1.GitCommit;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.GitCommit.deserializeBinaryFromReader);
+      msg.addCommits(value);
+      break;
+    case 14:
       var value = new proto.estafette.ci.manifest.v1.EstafetteTrigger;
       reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteTrigger.deserializeBinaryFromReader);
       msg.addTriggers(value);
       break;
-    case 6:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteStage;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteStage.deserializeBinaryFromReader);
-      msg.addStages(value);
+    case 15:
+      var value = new proto.estafette.ci.manifest.v1.EstafetteEvent;
+      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteEvent.deserializeBinaryFromReader);
+      msg.addEvents(value);
       break;
-    case 7:
-      var value = new proto.estafette.ci.manifest.v1.EstafetteRelease;
-      reader.readMessage(value,proto.estafette.ci.manifest.v1.EstafetteRelease.deserializeBinaryFromReader);
-      msg.addReleases(value);
+    case 16:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setInsertedAtTime(value);
+      break;
+    case 17:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setUpdatedAtTime(value);
+      break;
+    case 18:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setDuration(value);
+      break;
+    case 19:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setLastUpdatedAtTime(value);
       break;
     default:
       reader.skipField();
@@ -6084,9 +6784,9 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.Pipeline.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteManifest.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.Pipeline.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6094,184 +6794,422 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteManifest} message
+ * @param {!proto.estafette.ci.contracts.v1.Pipeline} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.Pipeline.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getBuilder();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
       1,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteBuilder.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getLabelsMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  f = message.getRepoSource();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
   }
-  f = message.getVersion();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getRepoOwner();
+  if (f.length > 0) {
+    writer.writeString(
       3,
-      f,
-      proto.estafette.ci.manifest.v1.EstafetteVersion.serializeBinaryToWriter
+      f
     );
   }
-  f = message.getGlobalEnvVarsMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  f = message.getRepoName();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getRepoBranch();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getRepoRevision();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getBuildVersion();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getBuildStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = message.getLabelsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      proto.estafette.ci.contracts.v1.Label.serializeBinaryToWriter
+    );
+  }
+  f = message.getReleaseTargetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      proto.estafette.ci.contracts.v1.ReleaseTarget.serializeBinaryToWriter
+    );
+  }
+  f = message.getManifest();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
+      f
+    );
+  }
+  f = message.getManifestWithDefaults();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
+      f
+    );
+  }
+  f = message.getCommitsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      13,
+      f,
+      proto.estafette.ci.contracts.v1.GitCommit.serializeBinaryToWriter
+    );
   }
   f = message.getTriggersList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      5,
+      14,
       f,
       proto.estafette.ci.manifest.v1.EstafetteTrigger.serializeBinaryToWriter
     );
   }
-  f = message.getStagesList();
+  f = message.getEventsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      6,
+      15,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteStage.serializeBinaryToWriter
+      proto.estafette.ci.manifest.v1.EstafetteEvent.serializeBinaryToWriter
     );
   }
-  f = message.getReleasesList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
-      7,
+  f = message.getInsertedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      16,
       f,
-      proto.estafette.ci.manifest.v1.EstafetteRelease.serializeBinaryToWriter
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getUpdatedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      17,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDuration();
+  if (f != null) {
+    writer.writeMessage(
+      18,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
+  f = message.getLastUpdatedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      19,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional EstafetteBuilder builder = 1;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteBuilder}
+ * optional string id = 1;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getBuilder = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteBuilder} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteBuilder, 1));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteBuilder|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setBuilder = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * optional string repo_source = 2;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearBuilder = function() {
-  this.setBuilder(undefined);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getRepoSource = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setRepoSource = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * optional string repo_owner = 3;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.hasBuilder = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getRepoOwner = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setRepoOwner = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * map<string, string> labels = 2;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,string>}
+ * optional string repo_name = 4;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getLabelsMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
-      null));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getRepoName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setRepoName = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * Clears values from the map. The map will be non-null.
+ * optional string repo_branch = 5;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearLabelsMap = function() {
-  this.getLabelsMap().clear();
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getRepoBranch = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setRepoBranch = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional EstafetteVersion version = 3;
- * @return {?proto.estafette.ci.manifest.v1.EstafetteVersion}
+ * optional string repo_revision = 6;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getVersion = function() {
-  return /** @type{?proto.estafette.ci.manifest.v1.EstafetteVersion} */ (
-    jspb.Message.getWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteVersion, 3));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getRepoRevision = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
-/** @param {?proto.estafette.ci.manifest.v1.EstafetteVersion|undefined} value */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setVersion = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setRepoRevision = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * optional string build_version = 7;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearVersion = function() {
-  this.setVersion(undefined);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getBuildVersion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setBuildVersion = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * Returns whether this field is set.
- * @return {boolean}
+ * optional string build_status = 8;
+ * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.hasVersion = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getBuildStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setBuildStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
 /**
- * map<string, string> global_env_vars = 4;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,string>}
+ * repeated Label labels = 9;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.Label>}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getGlobalEnvVarsMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
-      null));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getLabelsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.Label>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.Label, 9));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.Label>} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setLabelsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 9, value);
 };
 
 
 /**
- * Clears values from the map. The map will be non-null.
+ * @param {!proto.estafette.ci.contracts.v1.Label=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.Label}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearGlobalEnvVarsMap = function() {
-  this.getGlobalEnvVarsMap().clear();
+proto.estafette.ci.contracts.v1.Pipeline.prototype.addLabels = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.estafette.ci.contracts.v1.Label, opt_index);
 };
 
 
 /**
- * repeated EstafetteTrigger triggers = 5;
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearLabelsList = function() {
+  this.setLabelsList([]);
+};
+
+
+/**
+ * repeated ReleaseTarget release_targets = 10;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getReleaseTargetsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.ReleaseTarget, 10));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.ReleaseTarget>} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setReleaseTargetsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseTarget=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseTarget}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.addReleaseTargets = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.estafette.ci.contracts.v1.ReleaseTarget, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearReleaseTargetsList = function() {
+  this.setReleaseTargetsList([]);
+};
+
+
+/**
+ * optional string manifest = 11;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getManifest = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setManifest = function(value) {
+  jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * optional string manifest_with_defaults = 12;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getManifestWithDefaults = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setManifestWithDefaults = function(value) {
+  jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
+/**
+ * repeated GitCommit commits = 13;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.GitCommit>}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getCommitsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.GitCommit>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.GitCommit, 13));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.GitCommit>} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setCommitsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 13, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.GitCommit=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.GitCommit}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.addCommits = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 13, opt_value, proto.estafette.ci.contracts.v1.GitCommit, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearCommitsList = function() {
+  this.setCommitsList([]);
+};
+
+
+/**
+ * repeated estafette.ci.manifest.v1.EstafetteTrigger triggers = 14;
  * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getTriggersList = function() {
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getTriggersList = function() {
   return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTrigger, 5));
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteTrigger, 14));
 };
 
 
 /** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteTrigger>} value */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setTriggersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 5, value);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setTriggersList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 14, value);
 };
 
 
@@ -6280,84 +7218,182 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setTriggersList = fun
  * @param {number=} opt_index
  * @return {!proto.estafette.ci.manifest.v1.EstafetteTrigger}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.addTriggers = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.estafette.ci.manifest.v1.EstafetteTrigger, opt_index);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.addTriggers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 14, opt_value, proto.estafette.ci.manifest.v1.EstafetteTrigger, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearTriggersList = function() {
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearTriggersList = function() {
   this.setTriggersList([]);
 };
 
 
 /**
- * repeated EstafetteStage stages = 6;
- * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>}
+ * repeated estafette.ci.manifest.v1.EstafetteEvent events = 15;
+ * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getStagesList = function() {
-  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteStage, 6));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getEventsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteEvent, 15));
 };
 
 
-/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteStage>} value */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setStagesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 6, value);
+/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteEvent>} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setEventsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 15, value);
 };
 
 
 /**
- * @param {!proto.estafette.ci.manifest.v1.EstafetteStage=} opt_value
+ * @param {!proto.estafette.ci.manifest.v1.EstafetteEvent=} opt_value
  * @param {number=} opt_index
- * @return {!proto.estafette.ci.manifest.v1.EstafetteStage}
+ * @return {!proto.estafette.ci.manifest.v1.EstafetteEvent}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.addStages = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.estafette.ci.manifest.v1.EstafetteStage, opt_index);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.addEvents = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 15, opt_value, proto.estafette.ci.manifest.v1.EstafetteEvent, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearStagesList = function() {
-  this.setStagesList([]);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearEventsList = function() {
+  this.setEventsList([]);
 };
 
 
 /**
- * repeated EstafetteRelease releases = 7;
- * @return {!Array<!proto.estafette.ci.manifest.v1.EstafetteRelease>}
+ * optional google.protobuf.Timestamp inserted_at_time = 16;
+ * @return {?proto.google.protobuf.Timestamp}
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.getReleasesList = function() {
-  return /** @type{!Array<!proto.estafette.ci.manifest.v1.EstafetteRelease>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.manifest.v1.EstafetteRelease, 7));
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getInsertedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 16));
 };
 
 
-/** @param {!Array<!proto.estafette.ci.manifest.v1.EstafetteRelease>} value */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.setReleasesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 7, value);
-};
-
-
-/**
- * @param {!proto.estafette.ci.manifest.v1.EstafetteRelease=} opt_value
- * @param {number=} opt_index
- * @return {!proto.estafette.ci.manifest.v1.EstafetteRelease}
- */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.addReleases = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.estafette.ci.manifest.v1.EstafetteRelease, opt_index);
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setInsertedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 16, value);
 };
 
 
 /**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  */
-proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearReleasesList = function() {
-  this.setReleasesList([]);
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearInsertedAtTime = function() {
+  this.setInsertedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.hasInsertedAtTime = function() {
+  return jspb.Message.getField(this, 16) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp updated_at_time = 17;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getUpdatedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 17));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setUpdatedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 17, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearUpdatedAtTime = function() {
+  this.setUpdatedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.hasUpdatedAtTime = function() {
+  return jspb.Message.getField(this, 17) != null;
+};
+
+
+/**
+ * optional google.protobuf.Duration duration = 18;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 18));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setDuration = function(value) {
+  jspb.Message.setWrapperField(this, 18, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearDuration = function() {
+  this.setDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.hasDuration = function() {
+  return jspb.Message.getField(this, 18) != null;
+};
+
+
+/**
+ * optional google.protobuf.Timestamp last_updated_at_time = 19;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.getLastUpdatedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 19));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.setLastUpdatedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 19, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.clearLastUpdatedAtTime = function() {
+  this.setLastUpdatedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.Pipeline.prototype.hasLastUpdatedAtTime = function() {
+  return jspb.Message.getField(this, 19) != null;
 };
 
 
@@ -6371,16 +7407,375 @@ proto.estafette.ci.manifest.v1.EstafetteManifest.prototype.clearReleasesList = f
  * @extends {jspb.Message}
  * @constructor
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+proto.estafette.ci.contracts.v1.ReleaseLog = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.estafette.ci.contracts.v1.ReleaseLog.repeatedFields_, null);
 };
-goog.inherits(proto.estafette.ci.manifest.v1.EstafetteVersionParams, jspb.Message);
+goog.inherits(proto.estafette.ci.contracts.v1.ReleaseLog, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.estafette.ci.manifest.v1.EstafetteVersionParams.displayName = 'proto.estafette.ci.manifest.v1.EstafetteVersionParams';
+  proto.estafette.ci.contracts.v1.ReleaseLog.displayName = 'proto.estafette.ci.contracts.v1.ReleaseLog';
+}
+
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.repeatedFields_ = [6];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.ReleaseLog.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseLog} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    repoSource: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    repoOwner: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    repoName: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    releaseId: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    stepsList: jspb.Message.toObjectList(msg.getStepsList(),
+    proto.estafette.ci.contracts.v1.BuildLogStep.toObject, includeInstance),
+    insertedAtTime: (f = msg.getInsertedAtTime()) && proto.google.protobuf.Timestamp.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseLog}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.ReleaseLog;
+  return proto.estafette.ci.contracts.v1.ReleaseLog.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseLog} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.ReleaseLog}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoSource(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoOwner(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRepoName(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setReleaseId(value);
+      break;
+    case 6:
+      var value = new proto.estafette.ci.contracts.v1.BuildLogStep;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogStep.deserializeBinaryFromReader);
+      msg.addSteps(value);
+      break;
+    case 7:
+      var value = new proto.google.protobuf.Timestamp;
+      reader.readMessage(value,proto.google.protobuf.Timestamp.deserializeBinaryFromReader);
+      msg.setInsertedAtTime(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.ReleaseLog.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.ReleaseLog} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRepoSource();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getRepoOwner();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getRepoName();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getReleaseId();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getStepsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogStep.serializeBinaryToWriter
+    );
+  }
+  f = message.getInsertedAtTime();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.google.protobuf.Timestamp.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string id = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setId = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string repo_source = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getRepoSource = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setRepoSource = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string repo_owner = 3;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getRepoOwner = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setRepoOwner = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string repo_name = 4;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getRepoName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setRepoName = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string release_id = 5;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getReleaseId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setReleaseId = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * repeated BuildLogStep steps = 6;
+ * @return {!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getStepsList = function() {
+  return /** @type{!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogStep, 6));
+};
+
+
+/** @param {!Array<!proto.estafette.ci.contracts.v1.BuildLogStep>} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setStepsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.estafette.ci.contracts.v1.BuildLogStep=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.estafette.ci.contracts.v1.BuildLogStep}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.addSteps = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.estafette.ci.contracts.v1.BuildLogStep, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.clearStepsList = function() {
+  this.setStepsList([]);
+};
+
+
+/**
+ * optional google.protobuf.Timestamp inserted_at_time = 7;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.getInsertedAtTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Timestamp, 7));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.setInsertedAtTime = function(value) {
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.clearInsertedAtTime = function() {
+  this.setInsertedAtTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.ReleaseLog.prototype.hasInsertedAtTime = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.TailLogLine = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.TailLogLine, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.TailLogLine.displayName = 'proto.estafette.ci.contracts.v1.TailLogLine';
 }
 
 
@@ -6398,8 +7793,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.toObject = function(opt_includeInstance) {
-  return proto.estafette.ci.manifest.v1.EstafetteVersionParams.toObject(opt_includeInstance, this);
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.TailLogLine.toObject(opt_includeInstance, this);
 };
 
 
@@ -6408,15 +7803,19 @@ proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.toObject = funct
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersionParams} msg The msg instance to transform.
+ * @param {!proto.estafette.ci.contracts.v1.TailLogLine} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.toObject = function(includeInstance, msg) {
+proto.estafette.ci.contracts.v1.TailLogLine.toObject = function(includeInstance, msg) {
   var f, obj = {
-    autoIncrement: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    branch: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    revision: jspb.Message.getFieldWithDefault(msg, 3, "")
+    step: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    logLine: (f = msg.getLogLine()) && proto.estafette.ci.contracts.v1.BuildLogLine.toObject(includeInstance, f),
+    image: (f = msg.getImage()) && proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.toObject(includeInstance, f),
+    duration: (f = msg.getDuration()) && proto.google.protobuf.Duration.toObject(includeInstance, f),
+    exitCode: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    status: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    autoInjected: jspb.Message.getBooleanFieldWithDefault(msg, 7, false)
   };
 
   if (includeInstance) {
@@ -6430,23 +7829,23 @@ proto.estafette.ci.manifest.v1.EstafetteVersionParams.toObject = function(includ
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteVersionParams}
+ * @return {!proto.estafette.ci.contracts.v1.TailLogLine}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.deserializeBinary = function(bytes) {
+proto.estafette.ci.contracts.v1.TailLogLine.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.estafette.ci.manifest.v1.EstafetteVersionParams;
-  return proto.estafette.ci.manifest.v1.EstafetteVersionParams.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.estafette.ci.contracts.v1.TailLogLine;
+  return proto.estafette.ci.contracts.v1.TailLogLine.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersionParams} msg The message object to deserialize into.
+ * @param {!proto.estafette.ci.contracts.v1.TailLogLine} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.estafette.ci.manifest.v1.EstafetteVersionParams}
+ * @return {!proto.estafette.ci.contracts.v1.TailLogLine}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.deserializeBinaryFromReader = function(msg, reader) {
+proto.estafette.ci.contracts.v1.TailLogLine.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6454,16 +7853,35 @@ proto.estafette.ci.manifest.v1.EstafetteVersionParams.deserializeBinaryFromReade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setAutoIncrement(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStep(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setBranch(value);
+      var value = new proto.estafette.ci.contracts.v1.BuildLogLine;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogLine.deserializeBinaryFromReader);
+      msg.setLogLine(value);
       break;
     case 3:
+      var value = new proto.estafette.ci.contracts.v1.BuildLogStepDockerImage;
+      reader.readMessage(value,proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.deserializeBinaryFromReader);
+      msg.setImage(value);
+      break;
+    case 4:
+      var value = new proto.google.protobuf.Duration;
+      reader.readMessage(value,proto.google.protobuf.Duration.deserializeBinaryFromReader);
+      msg.setDuration(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setExitCode(value);
+      break;
+    case 6:
       var value = /** @type {string} */ (reader.readString());
-      msg.setRevision(value);
+      msg.setStatus(value);
+      break;
+    case 7:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setAutoInjected(value);
       break;
     default:
       reader.skipField();
@@ -6478,9 +7896,9 @@ proto.estafette.ci.manifest.v1.EstafetteVersionParams.deserializeBinaryFromReade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.serializeBinary = function() {
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.estafette.ci.manifest.v1.EstafetteVersionParams.serializeBinaryToWriter(this, writer);
+  proto.estafette.ci.contracts.v1.TailLogLine.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6488,78 +7906,398 @@ proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.serializeBinary 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.estafette.ci.manifest.v1.EstafetteVersionParams} message
+ * @param {!proto.estafette.ci.contracts.v1.TailLogLine} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.serializeBinaryToWriter = function(message, writer) {
+proto.estafette.ci.contracts.v1.TailLogLine.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAutoIncrement();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getStep();
+  if (f.length > 0) {
+    writer.writeString(
       1,
       f
     );
   }
-  f = message.getBranch();
+  f = message.getLogLine();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogLine.serializeBinaryToWriter
+    );
+  }
+  f = message.getImage();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.estafette.ci.contracts.v1.BuildLogStepDockerImage.serializeBinaryToWriter
+    );
+  }
+  f = message.getDuration();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      proto.google.protobuf.Duration.serializeBinaryToWriter
+    );
+  }
+  f = message.getExitCode();
+  if (f !== 0) {
+    writer.writeInt64(
+      5,
+      f
+    );
+  }
+  f = message.getStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+  f = message.getAutoInjected();
+  if (f) {
+    writer.writeBool(
+      7,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string step = 1;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getStep = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setStep = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional BuildLogLine log_line = 2;
+ * @return {?proto.estafette.ci.contracts.v1.BuildLogLine}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getLogLine = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.BuildLogLine} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogLine, 2));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.BuildLogLine|undefined} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setLogLine = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.clearLogLine = function() {
+  this.setLogLine(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.hasLogLine = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional BuildLogStepDockerImage image = 3;
+ * @return {?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getImage = function() {
+  return /** @type{?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage} */ (
+    jspb.Message.getWrapperField(this, proto.estafette.ci.contracts.v1.BuildLogStepDockerImage, 3));
+};
+
+
+/** @param {?proto.estafette.ci.contracts.v1.BuildLogStepDockerImage|undefined} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setImage = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.clearImage = function() {
+  this.setImage(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.hasImage = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional google.protobuf.Duration duration = 4;
+ * @return {?proto.google.protobuf.Duration}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getDuration = function() {
+  return /** @type{?proto.google.protobuf.Duration} */ (
+    jspb.Message.getWrapperField(this, proto.google.protobuf.Duration, 4));
+};
+
+
+/** @param {?proto.google.protobuf.Duration|undefined} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setDuration = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.clearDuration = function() {
+  this.setDuration(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.hasDuration = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional int64 exit_code = 5;
+ * @return {number}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getExitCode = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setExitCode = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional string status = 6;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional bool auto_injected = 7;
+ * @return {boolean}
+ */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.getAutoInjected = function() {
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+};
+
+
+/** @param {boolean} value */
+proto.estafette.ci.contracts.v1.TailLogLine.prototype.setAutoInjected = function(value) {
+  jspb.Message.setProto3BooleanField(this, 7, value);
+};
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.estafette.ci.contracts.v1.Warning = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.estafette.ci.contracts.v1.Warning, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  /**
+   * @public
+   * @override
+   */
+  proto.estafette.ci.contracts.v1.Warning.displayName = 'proto.estafette.ci.contracts.v1.Warning';
+}
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.estafette.ci.contracts.v1.Warning.prototype.toObject = function(opt_includeInstance) {
+  return proto.estafette.ci.contracts.v1.Warning.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.estafette.ci.contracts.v1.Warning} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.Warning.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    status: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    message: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.estafette.ci.contracts.v1.Warning}
+ */
+proto.estafette.ci.contracts.v1.Warning.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.estafette.ci.contracts.v1.Warning;
+  return proto.estafette.ci.contracts.v1.Warning.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.estafette.ci.contracts.v1.Warning} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.estafette.ci.contracts.v1.Warning}
+ */
+proto.estafette.ci.contracts.v1.Warning.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStatus(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.estafette.ci.contracts.v1.Warning.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.estafette.ci.contracts.v1.Warning.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.estafette.ci.contracts.v1.Warning} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.estafette.ci.contracts.v1.Warning.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getRevision();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
 };
 
 
 /**
- * optional int64 auto_increment = 1;
- * @return {number}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.getAutoIncrement = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/** @param {number} value */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.setAutoIncrement = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-/**
- * optional string branch = 2;
+ * optional string status = 1;
  * @return {string}
  */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.getBranch = function() {
+proto.estafette.ci.contracts.v1.Warning.prototype.getStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.estafette.ci.contracts.v1.Warning.prototype.setStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string message = 2;
+ * @return {string}
+ */
+proto.estafette.ci.contracts.v1.Warning.prototype.getMessage = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.setBranch = function(value) {
+proto.estafette.ci.contracts.v1.Warning.prototype.setMessage = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string revision = 3;
- * @return {string}
- */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.getRevision = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.estafette.ci.manifest.v1.EstafetteVersionParams.prototype.setRevision = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
